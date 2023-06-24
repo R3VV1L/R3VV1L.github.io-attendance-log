@@ -1,5 +1,5 @@
 name: Att-log-builds-&-tests
-run-name: ${{ github.actor }} is building ✅
+run-name:  project by ${{ github.actor }} is building
 on:
   push:
     branches: [ master ]
