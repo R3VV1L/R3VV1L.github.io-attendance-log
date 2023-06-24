@@ -27,56 +27,58 @@ export const Authorization = () => {
   };
 
   return (
-    <div className="form_auth_block">
-      <div className="form_auth_block_content">
-        <SguSvg />
-        <p className="form_auth_block_head_text">Вход в личный кабинет</p>
-        <p className="form_auth_block_text">
-          Введите данные вашей учетной записи, чтобы продолжить.
-        </p>
-        <form className="form_auth_style" action="#" method="post">
-          <label>Логин</label>
+    <div className="auth-block">
+      <SguSvg />
+      <p className="auth-block-head-text">Вход в личный кабинет</p>
+      <p className="auth-block-info-text">
+        Введите данные вашей учетной записи, чтобы продолжить.
+      </p>
+      <form className="auth-style" action="#" method="post">
+        <label>Логин</label>
+        <div className="auth-email-input">
           <input
-            className="input_text"
+            className="input-text"
             type="email"
-            name="auth_email"
+            name="auth-email"
             placeholder="Адрес эл. почты"
             required
             // value={user.username}
             onChange={handleInputChange}
           />
-          <label>Пароль</label>
+        </div>  
+        <label>Пароль</label>
+        <div className="auth-pass-input">
           <input
-            className="input_text"
+            className="input-text"
             type="password"
-            name="auth_pass"
+            name="auth-pass"
             placeholder="Введите пароль"
             required
             // value={user.password}
             onChange={handleInputChange}
           />
-          <button
-            className="form_auth_button"
-            type="submit"
-            name="form_auth_submit"
-            onClick={handleLogin}
-          >
-            Войти
-          </button>
-        </form>
-        <NavLink
-          to="/authorization-guest"
-          className="form_auth_block_text_student"
+        </div>
+        <button
+          className="auth-submit-button"
+          type="submit"
+          name="auth-submit"
+          onClick={handleLogin}
         >
-          Я - студент
-        </NavLink>
-        <NavLink
-          to="/forgot-password"
-          className="form_auth_block_text_recovery"
-        >
-          Забыли логин или пароль?
-        </NavLink>
-      </div>
+          Войти
+        </button>
+      </form>
+      <NavLink
+        to="/authorization-guest"
+        className="auth-block-student-text"
+      >
+        Я - студент
+      </NavLink>
+      <NavLink
+        to="/forgot-password"
+        className="auth-block-recovery-text"
+      >
+        Забыли логин или пароль?
+      </NavLink>
     </div>
   );
 };
