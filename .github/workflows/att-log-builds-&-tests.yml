@@ -1,0 +1,23 @@
+name: Att-log-builds-&-tests
+run-name: ${{ github.actor }} is building ✅
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  GitHub-Actions:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 14.x, 16.x, 18.x ]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Staring Node.js ${{ matrix.node-version }} 📼
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install modules 🔧
+        run: npm install
+      - name: build project 🚧
+        run: npm run build
