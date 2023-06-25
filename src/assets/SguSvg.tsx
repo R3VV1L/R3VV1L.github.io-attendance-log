@@ -4,7 +4,7 @@ export const SguSvg = () => {
   return (
     <div className="SguSvg">
       <svg
-        width="260"
+        width="400"
         height="253"
         viewBox="0 0 260 253"
         fill="none"
