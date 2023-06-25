@@ -2,8 +2,8 @@
     height: 253px;
     left: 130px;
     object-fit: cover;
-    position: relative;
+    text-align: center;
     top: 0;
     width: 260px;
-    display: flex;
+    display: block;
 }

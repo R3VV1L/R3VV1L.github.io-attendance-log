@@ -31,13 +31,13 @@ export const Authorization = () => {
       <SguSvg />
       <p className="auth-block-head-text">Вход в личный кабинет</p>
       <p className="auth-block-info-text">
-        Введите данные вашей учетной записи, чтобы продолжить.
+        Введите данные вашей учетной записи
       </p>
       <form className="auth-style" action="#" method="post">
-        <label>Логин</label>
-        <div className="auth-email-input">
+        {/* <label>Логин</label> */}
+        <div className="auth-email">
           <input
-            className="input-text"
+            className="email-input-text"
             type="email"
             name="auth-email"
             placeholder="Адрес эл. почты"
@@ -46,39 +46,41 @@ export const Authorization = () => {
             onChange={handleInputChange}
           />
         </div>  
-        <label>Пароль</label>
-        <div className="auth-pass-input">
+        {/* <label>Пароль</label> */}
+        <div className="auth-pass">
           <input
-            className="input-text"
+            className="pass-input-text"
             type="password"
             name="auth-pass"
-            placeholder="Введите пароль"
+            placeholder="Пароль"
             required
             // value={user.password}
             onChange={handleInputChange}
           />
         </div>
+      </form> 
+      <div className="auth-block-submit">
+        <NavLink
+          to="/authorization-guest"
+          className="auth-block-student-text"
+        >
+          Я  – студент
+        </NavLink>
         <button
-          className="auth-submit-button"
+          className="auth-block-submit-button"
           type="submit"
           name="auth-submit"
           onClick={handleLogin}
         >
           Войти
         </button>
-      </form>
-      <NavLink
-        to="/authorization-guest"
-        className="auth-block-student-text"
-      >
-        Я - студент
-      </NavLink>
+      </div>
       <NavLink
         to="/forgot-password"
-        className="auth-block-recovery-text"
+        className="auth-block-forgot-text"
       >
-        Забыли логин или пароль?
+        Забыли пароль?
       </NavLink>
-    </div>
+    </div>  
   );
 };
