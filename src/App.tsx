@@ -5,6 +5,7 @@ import { AuthorizationGuest } from "./pages/AuthorizationGuest/AuthorizationGues
 import { Attendance } from "./pages/Attendance/Attendance.tsx";
 import { ForgotPassword } from "./pages/ForgotPassword/ForgotPassword.tsx";
 import { NotFound } from "./pages/NotFound/NotFound.tsx";
+import { PrepodovateliTabl } from "./pages/PrepodovateliTabl/PrepodovateliTabl.tsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/authorization-guest" element={<AuthorizationGuest />} />
       <Route path="/attendance" element={<Attendance />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/teacher-tab" element={<PrepodovateliTabl />} />
       <Route path="*" element={<NotFound />} /> {/* add the 404 route */}
     </Routes>
   );
