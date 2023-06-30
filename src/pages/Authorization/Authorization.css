@@ -46,16 +46,74 @@ body {
     line-height: 22px;
 } */
 
-.auth-email input {
+.auth-input {
+    position: relative;
+    
+}
+
+.auth-input input {
     display: block;
     width: 100%;
     height: 64px;
     margin-top: 40px;
     box-sizing: border-box;
     border-radius: 8px;
-    border: none;
+    border: 1px solid lightgrey;
+    background-color: #F8F8F8;
     outline: none;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -webkit-appearance: none;
 }
+
+.auth-input input:focus{
+    border: 2px solid #1279BE;
+}
+
+.auth-input input::placeholder{
+    color:transparent;
+}
+
+.auth-input label{
+    box-sizing: border-box;
+    padding: 5px;
+    top: calc(50% - 16px);
+    left: 20px;
+    position: absolute;
+    pointer-events: none;
+    transition: all .1s linear;
+    background-color: #F8F8F8;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+  }
+
+.input-text {
+    padding: 0 20px;
+    font-family: Outfit, sans-serif;
+    font-size: 16px;
+    color: #000000;
+}
+
+.auth-input input:required:invalid + label{
+    color: red;
+}
+
+.auth-input input:focus:required:invalid{
+    border: 2px solid red;
+}
+
+.auth-input input:required:invalid + label:before{
+    content: '*';
+}
+
+.auth-input input:focus + label,
+
+.auth-input input:not(:placeholder-shown) + label{
+    font-size: 12px;
+    top: 0;
+    color: #1279BE;
+}   
 
 .auth-pass input {
     display: block;
@@ -65,14 +123,8 @@ body {
     box-sizing: border-box;
     border-radius: 8px;
     border: none;
+    background-color: #F8F8F8;
     outline: none;
-}
-
-.email-input-text {
-    padding: 0 20px;
-    font-family: Outfit, sans-serif;
-    font-size: 16px;
-    color: #000000;
 }
 
 .pass-input-text {
@@ -93,20 +145,11 @@ body {
     margin-top: 40px;
 }
 
-.auth-block-student-text {
-    display: inline;
-    padding: 16px 0 0 50px;
-    float: left;
-    text-decoration: none;
-    color: #1279BE;
-}
-
 .auth-block-submit-button {
-    width: 200px;
+    width: 100%;
     height: 48px;
     border: none;
     border-radius: 8px;
-    float: right;
     cursor: pointer;
     font-size: 16px;
     background: #1279BE;
