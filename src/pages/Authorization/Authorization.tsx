@@ -34,38 +34,32 @@ export const Authorization = () => {
         Введите данные вашей учетной записи
       </p>
       <form className="auth-style" action="#" method="post">
-        {/* <label>Логин</label> */}
-        <div className="auth-email">
+        <div className="auth-input">
           <input
-            className="email-input-text"
+            className="input-text"
             type="email"
             name="auth-email"
-            placeholder="Адрес эл. почты"
+            placeholder=" "
             required
             // value={user.username}
             onChange={handleInputChange}
           />
+          <label>Адрес эл. почты</label>
         </div>  
-        {/* <label>Пароль</label> */}
-        <div className="auth-pass">
+        <div className="auth-input">
           <input
-            className="pass-input-text"
+            className="input-text"
             type="password"
             name="auth-pass"
-            placeholder="Пароль"
+            placeholder=" "
             required
             // value={user.password}
             onChange={handleInputChange}
           />
+          <label>Пароль</label>
         </div>
       </form> 
       <div className="auth-block-submit">
-        <NavLink
-          to="/authorization-guest"
-          className="auth-block-student-text"
-        >
-          Я  – студент
-        </NavLink>
         <button
           className="auth-block-submit-button"
           type="submit"
