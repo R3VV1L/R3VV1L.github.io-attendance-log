@@ -35,7 +35,6 @@ export const ForgotPassword = () => {
           className="forgot-block-submit-button"
           type="submit"
           name="forgot-submit"
-
         >
           Отправить
         </button>
