@@ -45,7 +45,7 @@ export const Authorization = () => {
             onChange={handleInputChange}
           />
           <label>Адрес эл. почты</label>
-        </div>  
+        </div>
         <div className="auth-input">
           <input
             className="input-text"
@@ -58,7 +58,7 @@ export const Authorization = () => {
           />
           <label>Пароль</label>
         </div>
-      </form> 
+      </form>
       <div className="auth-block-submit">
         <button
           className="auth-block-submit-button"
@@ -69,12 +69,9 @@ export const Authorization = () => {
           Войти
         </button>
       </div>
-      <NavLink
-        to="/forgot-password"
-        className="auth-block-forgot-text"
-      >
+      <NavLink to="/forgot-password" className="auth-block-forgot-text">
         Забыли пароль?
       </NavLink>
-    </div>  
+    </div>
   );
 };

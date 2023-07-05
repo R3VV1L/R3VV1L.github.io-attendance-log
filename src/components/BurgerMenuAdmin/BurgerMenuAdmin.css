@@ -1,87 +1,77 @@
 .burger-menu {
-  position: fixed;
-  z-index: 1000;
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    z-index: 1000;
 }
 
 .burger-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 22px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
-.bar {
-  display: block;
-  width: 30px;
-  height: 4px;
-  background-color: #1279BE;
-  border-radius: 8px;
-  transition: transform 0.5s ease;  
+.burger-icon {
+    width: 45px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: transform 0.2s ease;
 }
 
-.burger-icon1 {
-  transform-origin: top left;
-  width: 30px;
+.burger-icon::before,
+.burger-icon::after {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: transform 0.2s ease;
 }
 
-.burger-icon2 {
-  transform-origin: center left;
-  width: 20px;
+.burger-icon::before {
+    transform-origin: top left;
 }
 
-.burger-icon3 {
-  transform-origin: bottom left;
-  width: 10px;
-}
-
-.burger-button.open .burger-icon1 {
-  transform: rotate(-90deg) translate(-30px, 0px);
-}
-
-.burger-button.open .burger-icon2 {
-  transform: rotate(-90deg) translate(-19.1px, 11px);
-}
-
-.burger-button.open .burger-icon3 {
-  transform: rotate(-90deg) translate(-7.4px, 22px);
-}
-
-.block-menu {
-  position: absolute;
-  right: 0;
-  width: 100%;
-  animation-duration: 0.5s;
-  animation-name: slide-in;
-  animation-fill-mode: forwards;
-  animation-name: slide-out;
+.burger-icon::after {
+    transform-origin: bottom left;
 }
 
 .menu-items {
-  width: 270px;
-  margin-top: 5px;
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 270px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .menu-items a {
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: black;
-  border-radius: 8px;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.2s ease;
+    border-radius: 8px;
 }
 
 .menu-items a:hover {
-  color: #fff;
+    color: blue;
 }
 
-.menu-items:hover {
-  background-color: #1279BE;
+.menu-items a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.2s ease;
+    border-radius: 8px;
 }
