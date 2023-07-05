@@ -1,14 +1,33 @@
-.box {
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+body {
+    margin: 0;
     width: 100%;
 }
 
-.box .rectangle-wrapper {
+header {
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+}
+
+ul {
+  margin: 0;
+}
+
+.link {
+    padding: 0 8px;
+    display: inline;
+    list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+/* .box {
     border: 0 none;
-    height: 84px;
+
     width: 1920px;
 }
 
@@ -20,4 +39,4 @@
     position: fixed;
     top: 0;
     width: 1920px;
-}
+} */

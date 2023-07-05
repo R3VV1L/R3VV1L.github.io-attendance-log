@@ -6,9 +6,9 @@ import { Outlet } from "react-router-dom";
 export const Layout = () => {
   return (
     <>
-      <div className="brgMenu">
+      {/* <div className="brgMenu">
         <BurgerMenuAdmin />
-      </div>
+      </div> */}
       <Header />
       <Outlet />
     </>

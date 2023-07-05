@@ -1,10 +1,10 @@
 // @ts-ignore
 import React from "react";
-import "./ForgotPassword.css";
+import "./recovery.css";
 import { SguSvg } from "../../assets/SguSvg.tsx";
 import { NavLink } from "react-router-dom";
 
-export const ForgotPassword = () => {
+export const Recovery = () => {
   return (
     <div className="forgot-block">
       <div className="svg-container">
