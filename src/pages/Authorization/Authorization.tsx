@@ -19,7 +19,7 @@ export const Authorization = () => {
 
   const handleLogin = () => {
     // Проверяем, что пользователь ввел правильные учетные данные
-    if (user.username === "admin" && user.password === "password") {
+    if (user.username === "admin@mail.ru" && user.password === "password") {
       setIsLoggedIn(true);
     } else {
       console.log("Неправильное имя пользователя или пароль", isLoggedIn);
@@ -41,7 +41,6 @@ export const Authorization = () => {
             name="auth-email"
             placeholder=" "
             required
-            // value={user.username}
             onChange={handleInputChange}
           />
           <label>Адрес эл. почты</label>
@@ -53,7 +52,6 @@ export const Authorization = () => {
             name="auth-pass"
             placeholder=" "
             required
-            // value={user.password}
             onChange={handleInputChange}
           />
           <label>Пароль</label>
