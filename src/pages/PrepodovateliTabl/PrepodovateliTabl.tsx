@@ -1,13 +1,16 @@
 // @ts-ignore
 import React from "react";
-import { BurgerMenuAdmin } from "../../components/BurgerMenuAdmin/BurgerMenuAdmin.tsx";
-import Tabl from "../../components/Tabl/Tabl.tsx";
+import { Search } from "../../components/search/Search.tsx";
+import "./PrepodovateliTabl.css";
 
 export const PrepodovateliTabl = () => {
   return (
     <div>
-      <BurgerMenuAdmin />
-      <Tabl />
+      <div className="label">Преподаватели</div>
+      <div className="srch">
+        <Search />
+      </div>
+      {/*вот сюда таблицу*/}
     </div>
   );
 };

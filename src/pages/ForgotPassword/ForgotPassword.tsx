@@ -26,7 +26,7 @@ export const ForgotPassword = () => {
         </div>
       </form>
       <div className="forgot-block-submit">
-        <NavLink to="/" className="forgot-block-auth-text">
+        <NavLink to="/auth" className="forgot-block-auth-text">
           На страницу входа
         </NavLink>
         <button
