@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import './BurgerMenuAdmin.css';
+import React, { useState } from "react";
+import "./BurgerMenuAdmin.css";
+import { NavLink } from "react-router-dom";
 
 export const BurgerMenuAdmin: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,20 +11,22 @@ export const BurgerMenuAdmin: React.FC = () => {
 
   return (
     <div className="burger-menu">
-      
-      <button className={`burger-button ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+      <button
+        className={`burger-button ${isOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
         <span className="bar burger-icon1"></span>
         <span className="bar burger-icon2"></span>
         <span className="bar burger-icon3"></span>
       </button>
-      
+
       {isOpen && (
         <div className="block-menu">
           <div className="menu-items">
             <a href="#">Студенты</a>
           </div>
           <div className="menu-items">
-            <a href="#">Преподаватели</a>
+            <NavLink to="/attendance/teacher-tab">Преподаватели</NavLink>
           </div>
           <div className="menu-items">
             <a href="#">Группы</a>
@@ -32,7 +35,7 @@ export const BurgerMenuAdmin: React.FC = () => {
             <a href="#">Подгруппы</a>
           </div>
           <div className="menu-items">
-            <a href="#">Выйти</a>
+            <NavLink to="/auth">Выйти</NavLink>
           </div>
         </div>
       )}
