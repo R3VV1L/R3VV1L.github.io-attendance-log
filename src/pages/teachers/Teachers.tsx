@@ -7,9 +7,9 @@ import "./Teachers.css";
 export const Teachers = () => {
   return (
     <div>
-      {/* <div className="search">
+      <div className="search">
         <Search />
-      </div> */}
+      </div>
       <div className="h1">
         <h1>Преподаватели</h1>
       </div>
