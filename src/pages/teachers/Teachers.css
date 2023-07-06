@@ -1,9 +1,10 @@
-.label {
-  color: #090a0b;
-  font-family: "Outfit-SemiBold", Helvetica, serif;
-  font-size: 32px;
-  font-weight: 600;
+.prep-text {
+  padding: 0px 0;
+  margin: 0;
+  color: #000;
+  
 }
+
 .search {
   border: 0 none;
   height: 48px;

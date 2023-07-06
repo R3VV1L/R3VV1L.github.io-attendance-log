@@ -1,10 +1,10 @@
 // @ts-ignore
 import React from 'react';
-import './Table.css';
+import './table.css';
 
 export const Table = () => {
   return (
-    <div className="table">
+    <div className="teacher-table">
       <table>
         <tbody>
           <tr>

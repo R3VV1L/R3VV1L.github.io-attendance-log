@@ -1,17 +1,17 @@
 table {
   border-collapse: collapse;
-  font-size: 16px;  
+  font-size: 12px;
+  width: 100%;
 }
 
 th {
-  width: 10%;
-  padding: 10px 20px;
+  width: 15%;
+  padding: 8px 20px;
   background: #1279be;
   color: #fff;
 }
 
 th:first-child {
-  width: 20%;
   border-radius: 8px 0 0 0;
 }
 
@@ -20,15 +20,14 @@ th:last-child {
 }
 
 td {
-  padding: 10px 20px;
+  padding: 8px 20px;
+  text-align: left;
   background: #fff;
   border-top: 1px solid #1279be;
   border-right: 1px solid #1279be2e;
-  text-align: left; 
 }
 
 td:first-child {
-  border-radius: 0 0 0 8px;
   border-bottom: none;
 }
 
@@ -37,6 +36,6 @@ td:last-child {
   border-radius: 0 0  8px 0;
 }
 
-tbody {
-  background: #f8f8f8;
+.teacher-table {
+  padding: 0 300px;
 }

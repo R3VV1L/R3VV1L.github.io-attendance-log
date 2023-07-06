@@ -1,27 +1,24 @@
-import "./Header.css";
+import "./header.css";
 import { NavLink } from "react-router-dom";
-
-// export const Header = () => {
-//   return (
-//     <div className="box">
-//       <div className="rectangle-wrapper">
-//         <div className="rectangle" />
-//       </div>
-//     </div>
-//   );
-// };
+import { BurgerMenuAdmin } from "../burger-menu-admin/BurgerMenuAdmin";
 
 export const Header = () => {
   return (
     <header>
-      <nav>
-        <ul>
-          <NavLink to="/attendance/students" className="link">Студенты</NavLink>
-          <NavLink to="/attendance/teachers" className="link">Преподаватели</NavLink>
-          <NavLink to="/attendance/groups" className="link">Группы</NavLink>
-          <NavLink to="/attendance/subgroups" className="link">Подгруппы</NavLink>
-          <NavLink to="/auth" className="link">Выйти</NavLink>
-        </ul>
+      <nav className="navbar">
+        <div className="navbar-logotype">
+          <NavLink to="/" className="navbar-logotype-text">
+            СГУ
+          </NavLink>
+        </div>
+        <div className="navbar-link">
+          <BurgerMenuAdmin />
+        </div>
+        <div className="navbar-profile">
+          <NavLink to="/" className="navbar-profile-text">
+            Копырин Андрей Сергеевич
+          </NavLink>
+        </div>
       </nav>
     </header>
   );

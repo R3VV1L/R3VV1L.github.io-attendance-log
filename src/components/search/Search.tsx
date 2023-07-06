@@ -1,4 +1,4 @@
-import "./Search.css";
+import "./search.css";
 import { Magnifier } from "../../assets/magnifier/Magnifier.tsx";
 
 export const Search = () => {
