@@ -1,5 +1,5 @@
-import "./Search.css";
-import { Magnifier } from "../../assets/magnifier/Magnifier.tsx";
+import "./search.css";
+import { Magnifier } from "../../assets/magnifier/magnifier.tsx";
 
 export const Search = () => {
   // const [searchResults, setSearchResults] = useState([]);

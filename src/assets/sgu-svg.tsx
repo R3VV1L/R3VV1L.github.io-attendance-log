@@ -1,8 +1,8 @@
-import "./SguSvg.css";
+import "./sgu-svg.css";
 
 export const SguSvg = () => {
   return (
-    <div className="SguSvg">
+    <div className="sgu-svg">
       <svg
         width="400"
         height="253"
