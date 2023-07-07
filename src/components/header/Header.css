@@ -1,13 +1,13 @@
 header {
   width: 100%;
-  height: 64px;
+  height: 80px;
   background-color: #fff;
   align-items: center;
 }
 
 .navbar {
   height: 100%;
-  padding: 0 200px;
+  padding: 0 300px;
 }
 
 .navbar-logotype {
@@ -20,25 +20,6 @@ header {
   padding: 0 16px;
   text-decoration: none;
   color: #000;
-}
-
-.navbar-link {
-  display: inline-block;
-  height: 100%;
-}
-
-.link {
-  padding: 0 16px;
-  text-decoration: none;
-  color: #000;
-  
-  &:hover {
-    color: #1279BE;
-  }
-
-  &:last-child:hover {
-    color: #be1234;
-  }
 }
 
 .navbar-profile {

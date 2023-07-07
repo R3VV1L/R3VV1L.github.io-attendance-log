@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./not-found.css";
+import "./NotFound.css";
 
 export const NotFound = () => {
   return (

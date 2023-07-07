@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./modal-group.css";
+import "./ModalGroup.css";
 
 export const ModalGroup = () => {
   const [showModal, setShowModal] = useState(false);

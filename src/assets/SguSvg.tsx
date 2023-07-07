@@ -1,4 +1,4 @@
-import "./sgu-svg.css";
+import "./SguSvg.css";
 
 export const SguSvg = () => {
   return (

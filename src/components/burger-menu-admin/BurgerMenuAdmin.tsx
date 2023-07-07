@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./burger-menu-admin.css";
+import "./BurgerMenuAdmin.css";
 import { NavLink } from "react-router-dom";
 
 export const BurgerMenuAdmin: React.FC = () => {

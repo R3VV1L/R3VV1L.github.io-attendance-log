@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./authorization.css";
-import { SguSvg } from "../../assets/sgu-svg.tsx";
+import { SguSvg } from "../../assets/SguSvg.tsx";
 import { NavLink } from "react-router-dom";
 
 type User = {

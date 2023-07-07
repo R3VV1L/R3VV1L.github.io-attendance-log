@@ -1,5 +1,6 @@
 import "./header.css";
 import { NavLink } from "react-router-dom";
+import { BurgerMenuAdmin } from "../burger-menu-admin/BurgerMenuAdmin";
 
 export const Header = () => {
   return (
@@ -11,11 +12,7 @@ export const Header = () => {
           </NavLink>
         </div>
         <div className="navbar-link">
-          <NavLink to="/groups" className="link">Группы</NavLink>
-          <NavLink to="/subgroups" className="link">Подгруппы</NavLink>
-          <NavLink to="/students" className="link">Студенты</NavLink>
-          <NavLink to="/teachers" className="link">Преподаватели</NavLink>
-          <NavLink to="/auth" className="link">Выйти</NavLink>
+          <BurgerMenuAdmin />
         </div>
         <div className="navbar-profile">
           <NavLink to="/" className="navbar-profile-text">

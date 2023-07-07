@@ -1,7 +1,7 @@
 // @ts-ignore
 import React from "react";
 import "./groups.css";
-import { Header } from "../../components/header/header.tsx";
+import { Header } from "../../components/header/Header.tsx";
 
 export const Groups = () => {
   return (
