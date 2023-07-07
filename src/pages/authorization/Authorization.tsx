@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./authorization.css";
+import "./Authorization.css";
 import { SguSvg } from "../../assets/SguSvg.tsx";
 import { NavLink } from "react-router-dom";
 

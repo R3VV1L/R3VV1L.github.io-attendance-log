@@ -1,6 +1,6 @@
 // @ts-ignore
-import React from 'react';
-import './table.css';
+import React from "react";
+import "./Table.css";
 
 export const Table = () => {
   return (
@@ -55,7 +55,7 @@ export const Table = () => {
             <td></td>
             <td></td>
           </tr>
-        </tbody>  
+        </tbody>
       </table>
     </div>
   );

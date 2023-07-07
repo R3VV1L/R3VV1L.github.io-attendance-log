@@ -1,6 +1,6 @@
 // @ts-ignore
 import React from "react";
-import "./recovery.css";
+import "./Recovery.css";
 import { SguSvg } from "../../assets/SguSvg.tsx";
 import { NavLink } from "react-router-dom";
 
