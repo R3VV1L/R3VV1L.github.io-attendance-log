@@ -1,20 +1,24 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Authorization } from "./pages/Authorization/Authorization.tsx";
-import { ForgotPassword } from "./pages/ForgotPassword/ForgotPassword.tsx";
-import { NotFound } from "./pages/NotFound/NotFound.tsx";
-import { PrepodovateliTabl } from "./pages/PrepodovateliTabl/PrepodovateliTabl.tsx";
-import { Layout } from "./components/Layout/Layout.tsx";
+import { Authorization } from "./pages/authorization/Authorization.tsx";
+import { Recovery } from "./pages/recovery/Recovery.tsx";
+import { NotFound } from "./pages/not-found/NotFound.tsx";
+import { Teachers } from "./pages/teachers/Teachers.tsx";
+import { Groups } from "./pages/groups/Groups.tsx";
+import { Students } from "./pages/students/Students.tsx";
+import { Subgroups } from "./pages/subgroups/Subgroups.tsx";
 
 function App() {
   return (
     <Routes>
-      <Route path="attendance" element={<Layout />}>
-        <Route path="teacher-tab" element={<PrepodovateliTabl />} />
-      </Route>
       <Route path="auth" element={<Authorization />} />
-      <Route path="forgot-password" element={<ForgotPassword />} />
+      <Route path="recovery" element={<Recovery />} />
       <Route path="*" element={<NotFound />} /> {/* add the 404 route */}
+
+      <Route path="groups" element={<Groups />} />
+      <Route path="subgroups" element={<Subgroups />} />
+      <Route path="students" element={<Students />} />
+      <Route path="teachers" element={<Teachers />} />
     </Routes>
   );
 }

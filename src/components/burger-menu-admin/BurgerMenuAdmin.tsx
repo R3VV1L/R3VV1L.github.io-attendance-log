@@ -26,7 +26,7 @@ export const BurgerMenuAdmin: React.FC = () => {
             <a href="#">Студенты</a>
           </div>
           <div className="menu-items">
-            <NavLink to="/attendance/teacher-tab">Преподаватели</NavLink>
+            <NavLink to="/attendance/teachers">Преподаватели</NavLink>
           </div>
           <div className="menu-items">
             <a href="#">Группы</a>

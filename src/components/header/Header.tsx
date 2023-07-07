@@ -1,11 +1,25 @@
-import "./Header.css";
+import "./header.css";
+import { NavLink } from "react-router-dom";
+import { BurgerMenuAdmin } from "../burger-menu-admin/BurgerMenuAdmin";
 
 export const Header = () => {
   return (
-    <div className="box">
-      <div className="rectangle-wrapper">
-        <div className="rectangle" />
-      </div>
-    </div>
+    <header>
+      <nav className="navbar">
+        <div className="navbar-logotype">
+          <NavLink to="/" className="navbar-logotype-text">
+            СГУ
+          </NavLink>
+        </div>
+        <div className="navbar-link">
+          <BurgerMenuAdmin />
+        </div>
+        <div className="navbar-profile">
+          <NavLink to="/" className="navbar-profile-text">
+            Копырин Андрей Сергеевич
+          </NavLink>
+        </div>
+      </nav>
+    </header>
   );
 };
