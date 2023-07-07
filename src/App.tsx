@@ -3,10 +3,10 @@ import "./App.css";
 import { Authorization } from "./pages/authorization/Authorization.tsx";
 import { Recovery } from "./pages/recovery/Recovery.tsx";
 import { NotFound } from "./pages/not-found/NotFound.tsx";
-import { Groups } from "./pages/groups/Groups.tsx";
-import { Subgroups } from "./pages/subgroups/Subgroups.tsx";
-import { Students } from "./pages/students/Students.tsx";
 import { Teachers } from "./pages/teachers/Teachers.tsx";
+import { Groups } from "./pages/groups/Groups.tsx";
+import { Students } from "./pages/students/Students.tsx";
+import { Subgroups } from "./pages/subgroups/Subgroups.tsx";
 
 function App() {
   return (
