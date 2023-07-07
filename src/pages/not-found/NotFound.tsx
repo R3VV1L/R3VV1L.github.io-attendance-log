@@ -7,7 +7,9 @@ export const NotFound = () => {
       <h1>404</h1>
       <h2>404</h2>
       <h3>404</h3>
-      <NavLink to={"/"}>Перейти назад</NavLink>
+      <NavLink to={"/auth"} className="goBack">
+        Перейти назад
+      </NavLink>
     </div>
   );
 };

@@ -1,0 +1,56 @@
+button {
+    cursor: pointer;
+}
+.button-page-fill {
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: left;
+    font: 500 16px/16px "Outfit", sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #1279be;
+    border-radius: 24px;
+    padding: 10px;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    width: 270px;
+    height: 48px;
+}
+.button-page-empty {
+    box-sizing: border-box;
+    border-radius: 24px;
+    border-style: solid;
+    border-color: #1279be;
+    border-width: 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 48px;
+    position: relative;
+    color: #1279be;
+    text-align: left;
+    font: 500 16px/16px "Outfit", sans-serif;
+}
+.button-modal {
+    box-sizing: border-box;
+    background: #1279be;
+    border-radius: 24px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    width: 503px;
+    height: 48px;
+    position: relative;
+    color: #ffffff;
+    text-align: left;
+    font: 500 16px/16px "Outfit", sans-serif;
+    justify-content: center
+}
