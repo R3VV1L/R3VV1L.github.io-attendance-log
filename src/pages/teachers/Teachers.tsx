@@ -3,7 +3,7 @@ import React from "react";
 import { Search } from "../../components/search/Search.tsx";
 import { Table } from "../../components/tables/Table.tsx";
 import { Header } from "../../components/header/Header.tsx";
-import "./teachers.css";
+import "./Teachers.css";
 
 export const Teachers = () => {
   return (
@@ -16,6 +16,6 @@ export const Teachers = () => {
         <p>Преподаватели</p>
       </div> */}
       <Table />
-    </div> 
+    </div>
   );
 };

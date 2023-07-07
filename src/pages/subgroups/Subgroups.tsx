@@ -1,13 +1,13 @@
 // @ts-ignore
 import React from "react";
-import "./students.css";
+import "./Subgroups.css";
 import { Header } from "../../components/header/Header.tsx";
 
-export const Students = () => {
+export const Subgroups = () => {
   return (
     <div>
       <Header />
-      Students
+      subgroups
     </div>
   );
 };
