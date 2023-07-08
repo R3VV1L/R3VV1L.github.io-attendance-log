@@ -1,5 +1,5 @@
 body {
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
 }
 
 .sgu-svg {
@@ -12,7 +12,7 @@ body {
     height: 700px;
     margin: auto;
     margin-top: 30px;
-    background: #F8F8F8;
+    background: #f8f8f8;
 }
 
 .auth-block-head-text {
@@ -23,7 +23,7 @@ body {
     font-family: Outfit, sans-serif;
     font-weight: 600;
     letter-spacing: 0.32px;
-    color: #0A0A0C;
+    color: #0a0a0c;
 }
 
 .auth-block-info-text {
@@ -47,35 +47,35 @@ body {
     box-sizing: border-box;
     border-radius: 8px;
     border: 1px solid lightgrey;
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
     outline: none;
-    transition: all .1s linear;
-    -webkit-transition: all .1s linear;
-    -moz-transition: all .1s linear;
+    transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
     -webkit-appearance: none;
     appearance: none;
 }
 
-.auth-input input:focus{
-    border: 2px solid #1279BE;
+.auth-input input:focus {
+    border: 2px solid #1279be;
 }
 
-.auth-input input::placeholder{
+.auth-input input::placeholder {
     color: #414143;
 }
 
-.auth-input label{
+.auth-input label {
     box-sizing: border-box;
     padding: 5px;
     top: calc(50% - 16px);
     left: 20px;
     position: absolute;
     pointer-events: none;
-    transition: all .1s linear;
-    background-color: #F8F8F8;
-    -webkit-transition: all .1s linear;
-    -moz-transition: all .1s linear;
-  }
+    transition: all 0.1s linear;
+    background-color: #f8f8f8;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+}
 
 .input-text {
     padding: 0 20px;
@@ -85,12 +85,11 @@ body {
 }
 
 .auth-input input:focus + label,
-
-.auth-input input:not(:placeholder-shown) + label{
+.auth-input input:not(:placeholder-shown) + label {
     font-size: 12px;
     top: 0;
-    color: #1279BE;
-}   
+    color: #1279be;
+}
 
 .auth-pass input {
     display: block;
@@ -100,14 +99,14 @@ body {
     box-sizing: border-box;
     border-radius: 8px;
     border: none;
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
     outline: none;
 }
 
 ::placeholder {
     font-family: Outfit, sans-serif;
     font-size: 16px;
-    color: rgba(65, 65, 67, 0.50);
+    color: rgba(65, 65, 67, 0.5);
 }
 
 .auth-block-submit {
@@ -122,8 +121,8 @@ body {
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    background: #1279BE;
-    color: #F8F8F8;
+    background: #1279be;
+    color: #f8f8f8;
 }
 
 .auth-block-forgot-text {
@@ -131,5 +130,5 @@ body {
     margin-top: 40px;
     text-align: center;
     text-decoration: none;
-    color: #1279BE;
+    color: #1279be;
 }
