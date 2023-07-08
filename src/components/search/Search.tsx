@@ -22,7 +22,7 @@ export const Search = ({ onSearch }: SearchProps) => {
     return (
         <form className="search-box">
             <input
-                className="box-text-wrapper"
+                className="search-box-text"
                 type="search"
                 placeholder="Поиск..."
                 required
@@ -32,6 +32,7 @@ export const Search = ({ onSearch }: SearchProps) => {
             />
             <button
                 className="search-bottom"
+                type="button"
                 onClick={() => console.log('click-click')}
             >
                 <Magnifier />
