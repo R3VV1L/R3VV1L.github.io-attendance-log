@@ -3,9 +3,5 @@ import React from "react";
 import "./Groups.css";
 
 export const Groups = () => {
-  return (
-    <div>
-      groups
-    </div>
-  );
+  return <div>groups</div>;
 };

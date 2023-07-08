@@ -1,0 +1,13 @@
+.arrow-right {
+    position: absolute;
+    left: 1797px;
+    top: 486px;
+    overflow: visible;
+}
+.arrow-left {
+    position: absolute;
+    left: 1676px;
+    top: 486px;
+    transform: translate(-8px, 0px);
+    overflow: visible;
+}

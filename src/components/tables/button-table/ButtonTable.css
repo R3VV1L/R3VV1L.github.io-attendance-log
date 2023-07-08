@@ -1,0 +1,30 @@
+.button-table * {
+    box-sizing: border-box;
+}
+.button-table {
+    position: absolute;
+    inset: 0;
+}
+.button-table-border {
+    background: #ffffff;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #1279be;
+    border-width: 1px;
+    width: 167px;
+    height: 38px;
+    position: absolute;
+    left: 1653px;
+    top: 475px;
+}
+
+.text {
+    color: #1279be;
+    text-align: left;
+    font: 400 16px "Outfit", sans-serif;
+    position: absolute;
+    left: 1710px;
+    top: 483px;
+    width: 54px;
+    height: 22px;
+}

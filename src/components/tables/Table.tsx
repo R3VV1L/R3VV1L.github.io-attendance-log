@@ -1,12 +1,142 @@
 // @ts-ignore
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Table.css";
+import { useDispatch } from "react-redux";
+import { setTableLength } from "../../API/action.tsx";
 
 export const Table = () => {
+  const teachers = [
+    {
+      name: "Иванов Иван Иванович",
+      position: "Преподаватель",
+      department: "Математики",
+      email: "ivanov@university.edu",
+      login: "ivanov_ii",
+      password: "ivanov123",
+    },
+    {
+      name: "Петров Петр Петрович",
+      position: "Ассистент",
+      department: "Физики",
+      email: "petrov@university.edu",
+      login: "petrov_pp",
+      password: "petrov456",
+    },
+    {
+      name: "Сидорова Анна Ивановна",
+      position: "Старший преподаватель",
+      department: "Информатики",
+      email: "sidorova@university.edu",
+      login: "sidorova_ai",
+      password: "sidorova789",
+    },
+    {
+      name: "Иванов Иван Иванович",
+      position: "Преподаватель",
+      department: "Математики",
+      email: "ivanov@university.edu",
+      login: "ivanov_ii",
+      password: "ivanov123",
+    },
+    {
+      name: "Петров Петр Петрович",
+      position: "Ассистент",
+      department: "Физики",
+      email: "petrov@university.edu",
+      login: "petrov_pp",
+      password: "petrov456",
+    },
+    {
+      name: "Сидорова Анна Ивановна",
+      position: "Старший преподаватель",
+      department: "Информатики",
+      email: "sidorova@university.edu",
+      login: "sidorova_ai",
+      password: "sidorova789",
+    },
+    {
+      name: "Иванов Иван Иванович",
+      position: "Преподаватель",
+      department: "Математики",
+      email: "ivanov@university.edu",
+      login: "ivanov_ii",
+      password: "ivanov123",
+    },
+    {
+      name: "Петров Петр Петрович",
+      position: "Ассистент",
+      department: "Физики",
+      email: "petrov@university.edu",
+      login: "petrov_pp",
+      password: "petrov456",
+    },
+    {
+      name: "Сидорова Анна Ивановна",
+      position: "Старший преподаватель",
+      department: "Информатики",
+      email: "sidorova@university.edu",
+      login: "sidorova_ai",
+      password: "sidorova789",
+    },
+    {
+      name: "Иванов Иван Иванович",
+      position: "Преподаватель",
+      department: "Математики",
+      email: "ivanov@university.edu",
+      login: "ivanov_ii",
+      password: "ivanov123",
+    },
+    {
+      name: "Петров Петр Петрович",
+      position: "Ассистент",
+      department: "Физики",
+      email: "petrov@university.edu",
+      login: "petrov_pp",
+      password: "petrov456",
+    },
+    {
+      name: "Сидорова Анна Ивановна",
+      position: "Старший преподаватель",
+      department: "Информатики",
+      email: "sidorova@university.edu",
+      login: "sidorova_ai",
+      password: "sidorova789",
+    },
+    {
+      name: "Иванов Иван Иванович",
+      position: "Преподаватель",
+      department: "Математики",
+      email: "ivanov@university.edu",
+      login: "ivanov_ii",
+      password: "ivanov123",
+    },
+    {
+      name: "Петров Петр Петрович",
+      position: "Ассистент",
+      department: "Физики",
+      email: "petrov@university.edu",
+      login: "petrov_pp",
+      password: "petrov456",
+    },
+    {
+      name: "Сидорова Анна Ивановна",
+      position: "Старший преподаватель",
+      department: "Информатики",
+      email: "sidorova@university.edu",
+      login: "sidorova_ai",
+      password: "sidorova789",
+    },
+  ]; // данные с бд, потом добавить фетч или аксиос
+
+  const dispatch = useDispatch();
+
+  const tableLength = teachers.length; // вычисление длины строк в таблице
+  dispatch(setTableLength(tableLength));
+
   return (
     <div className="teacher-table">
       <table>
-        <tbody>
+        <thead>
           <tr>
             <th>ФИО</th>
             <th>Должность</th>
@@ -15,46 +145,18 @@ export const Table = () => {
             <th>Логин</th>
             <th>Пароль</th>
           </tr>
-          <tr>
-            <td>Кольцова Адриана</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Кольцова Адриана</td>
-            <td>qwd</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Веретнов Александр Вадимович</td>
-            <td>qwd</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Веретнов Александр Вадимович</td>
-            <td>qwd</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Веретнов Александр Вадимович</td>
-            <td>qwd</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+        </thead>
+        <tbody>
+          {teachers.map((teacher, index) => (
+            <tr key={index}>
+              <td>{teacher.name}</td>
+              <td>{teacher.position}</td>
+              <td>{teacher.department}</td>
+              <td>{teacher.email}</td>
+              <td>{teacher.login}</td>
+              <td>{teacher.password}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
