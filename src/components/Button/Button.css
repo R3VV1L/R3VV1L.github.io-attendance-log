@@ -49,6 +49,7 @@ button {
     padding: 10px;
     display: flex;
     flex-direction: row;
+    border: none;
     gap: 10px;
     align-items: center;
     width: 503px;

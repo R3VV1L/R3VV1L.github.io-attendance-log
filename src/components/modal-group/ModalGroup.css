@@ -34,3 +34,34 @@
     font: 600 32px 'Outfit', sans-serif;
     position: relative;
 }
+
+.modal-name {
+    box-sizing: border-box;
+    color: #0a0a0c;
+    text-align: left;
+    font: 500 16px/22px "Outfit", sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.input-name {
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px 14px 20px 14px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 415px;
+    height: 48px;
+    position: relative;
+    color: rgba(65, 65, 67, 0.5);
+    text-align: left;
+    font: 400 16px "Outfit", sans-serif;
+    flex: 1;
+    color: #0a0a0c;
+}
