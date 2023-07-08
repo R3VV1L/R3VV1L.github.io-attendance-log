@@ -28,9 +28,9 @@
     cursor: pointer;
 }
 
-.title{
+.title {
     color: #0a0a0c;
     text-align: left;
-    font: 600 32px "Outfit", sans-serif;
+    font: 600 32px 'Outfit', sans-serif;
     position: relative;
 }

@@ -3,7 +3,6 @@
 }
 .button-table {
     inset: 0;
-
 }
 .button-table-border {
     background: #ffffff;
@@ -21,7 +20,7 @@
 .text {
     color: #1279be;
     text-align: left;
-    font: 400 16px "Outfit", sans-serif;
+    font: 400 16px 'Outfit', sans-serif;
     position: absolute;
     left: 1710px;
     top: 483px;

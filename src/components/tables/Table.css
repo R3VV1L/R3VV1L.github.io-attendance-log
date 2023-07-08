@@ -1,41 +1,41 @@
 table {
-  border-collapse: collapse;
-  font-size: 12px;
-  width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    width: 100%;
 }
 
 th {
-  width: 15%;
-  padding: 8px 20px;
-  background: #1279be;
-  color: #fff;
+    width: 15%;
+    padding: 8px 20px;
+    background: #1279be;
+    color: #fff;
 }
 
 th:first-child {
-  border-radius: 8px 0 0 0;
+    border-radius: 8px 0 0 0;
 }
 
 th:last-child {
-  border-radius: 0 8px 0 0;
+    border-radius: 0 8px 0 0;
 }
 
 td {
-  padding: 8px 20px;
-  text-align: left;
-  background: #fff;
-  border-top: 1px solid #1279be;
-  border-right: 1px solid #1279be2e;
+    padding: 8px 20px;
+    text-align: left;
+    background: #fff;
+    border-top: 1px solid #1279be;
+    border-right: 1px solid #1279be2e;
 }
 
 td:first-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 td:last-child {
-  border-right: none;
-  border-radius: 0 0  8px 0;
+    border-right: none;
+    border-radius: 0 0 8px 0;
 }
 
 .teacher-table {
-  padding: 0 300px;
+    padding: 0 300px;
 }

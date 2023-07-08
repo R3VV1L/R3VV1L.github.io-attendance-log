@@ -1,7 +1,7 @@
 // @ts-ignore
-import React from "react";
-import "./Students.css";
+import React from 'react';
+import './Students.css';
 
 export const Students = () => {
-  return <div>Students</div>;
+    return <div>Students</div>;
 };
