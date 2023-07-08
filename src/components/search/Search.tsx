@@ -20,22 +20,22 @@ export const Search = ({ onSearch }: SearchProps) => {
     };
 
     return (
-           <form className="search-box">
-               <input
-                    className="box-text-wrapper"
-                    type="search"
-                    placeholder="Поиск..."
-                    required
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
-                    onKeyPress={handleKeyPress}
-                />
-        <button
-          className="search-bottom"
-          onClick={() => console.log("click-click")}
-        >
-          <Magnifier />
-        </button>
-    </form>
+        <form className="search-box">
+            <input
+                className="box-text-wrapper"
+                type="search"
+                placeholder="Поиск..."
+                required
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                onKeyPress={handleKeyPress}
+            />
+            <button
+                className="search-bottom"
+                onClick={() => console.log('click-click')}
+            >
+                <Magnifier />
+            </button>
+        </form>
     );
 };
