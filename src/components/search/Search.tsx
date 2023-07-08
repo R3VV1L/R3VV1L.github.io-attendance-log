@@ -19,8 +19,13 @@ export const Search = ({ onSearch }: SearchProps) => {
         }
     };
 
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        handleSearch();
+    };
+
     return (
-        <form className="search-box">
+        <form className="search-box" onSubmit={handleSubmit}>
             <input
                 className="search-box-text"
                 type="search"
@@ -30,11 +35,7 @@ export const Search = ({ onSearch }: SearchProps) => {
                 onChange={(event) => setQuery(event.target.value)}
                 onKeyPress={handleKeyPress}
             />
-            <button
-                className="search-bottom"
-                type="button"
-                onClick={() => console.log('click-click')}
-            >
+            <button type="submit" className="search-bottom">
                 <Magnifier />
             </button>
         </form>
