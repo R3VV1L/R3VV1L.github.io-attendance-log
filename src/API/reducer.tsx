@@ -1,11 +1,12 @@
+import { SET_TABLE_LENGTH } from "./action.tsx";
+
 const initialState = {
   tableLength: 0,
 };
 
-// @ts-ignore
-export const tableReducer = (state = initialState, action) => {
+const rootReducer = (state = initialState, action: any) => {
   switch (action.type) {
-    case "SET_TABLE_LENGTH":
+    case SET_TABLE_LENGTH:
       return {
         ...state,
         tableLength: action.payload,
@@ -14,3 +15,5 @@ export const tableReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default rootReducer;
