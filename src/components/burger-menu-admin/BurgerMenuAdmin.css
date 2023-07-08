@@ -22,7 +22,7 @@
     display: block;
     width: 30px;
     height: 4px;
-    background-color: #1279BE;
+    background-color: #1279be;
     border-radius: 8px;
     transition: transform 0.5s ease;
 }
@@ -59,7 +59,6 @@
     animation-duration: 0.5s;
     animation-name: slide-in;
     animation-fill-mode: forwards;
-    animation-name: slide-out;
 }
 
 .menu-items {
@@ -83,5 +82,5 @@
 }
 
 .menu-items:hover {
-    background-color: #1279BE;
+    background-color: #1279be;
 }

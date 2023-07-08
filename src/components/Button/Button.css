@@ -5,7 +5,7 @@ button {
     box-sizing: border-box;
     color: #ffffff;
     text-align: left;
-    font: 500 16px/16px "Outfit", sans-serif;
+    font: 500 16px/16px 'Outfit', sans-serif;
     position: relative;
     display: flex;
     align-items: center;
@@ -36,7 +36,7 @@ button {
     position: relative;
     color: #1279be;
     text-align: left;
-    font: 500 16px/16px "Outfit", sans-serif;
+    font: 500 16px/16px 'Outfit', sans-serif;
 }
 .button-modal {
     box-sizing: border-box;
@@ -52,6 +52,6 @@ button {
     position: relative;
     color: #ffffff;
     text-align: left;
-    font: 500 16px/16px "Outfit", sans-serif;
-    justify-content: center
+    font: 500 16px/16px 'Outfit', sans-serif;
+    justify-content: center;
 }
