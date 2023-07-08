@@ -13,30 +13,26 @@ export const Search = () => {
   // };
 
   return (
-    <div className="box">
-      <div className="box-frame-wrapper">
-        <div className="box-frame">
-          <div className="box-div">
-            <input
-              className="box-text-wrapper"
-              type="search"
-              placeholder="Поиск..."
-              required
-            />
-            <button
-              className="box-magnifier"
-              onClick={() => console.log("click-click")}
-            >
-              <Magnifier />
-            </button>
-          </div>
-        </div>
-      </div>
+    <form className="search-box">
+        <input
+          className="search-box-text"
+          type="search"
+          placeholder="Поиск..."
+          required
+        />
+        <button
+          className="search-bottom"
+          onClick={() => console.log("click-click")}
+        >
+          <Magnifier />
+        </button>
+
+
       {/*<ul>*/}
       {/*  {searchResults.map((result) => (*/}
       {/*    <li key={result.id}>{result.title}</li>*/}
       {/*  ))}*/}
       {/*</ul>*/}
-    </div>
+    </form>
   );
 };
