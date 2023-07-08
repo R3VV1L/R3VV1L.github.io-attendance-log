@@ -1,11 +1,12 @@
 // @ts-ignore
 import React, { useContext, useEffect, useState } from "react";
 import "./Table.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@reduxjs/toolkit/dist/query/core/apiState";
 import { setTableLength } from "../../API/action.tsx";
 
 export const Table = () => {
-  const teachers = [
+  const teacherss = [
     {
       name: "Иванов Иван Иванович",
       position: "Преподаватель",
@@ -128,10 +129,15 @@ export const Table = () => {
     },
   ]; // данные с бд, потом добавить фетч или аксиос
 
+  useSelector((state: RootState<any, any, any>) => state.teachers);
+  const tableLength = teacherss.length; // вычисление длины строк в таблице
+  console.log(tableLength);
+
   const dispatch = useDispatch();
 
-  const tableLength = teachers.length; // вычисление длины строк в таблице
-  dispatch(setTableLength(tableLength));
+  useEffect(() => {
+    dispatch(setTableLength(tableLength));
+  }, [dispatch, tableLength]);
 
   return (
     <div className="teacher-table">
@@ -147,7 +153,7 @@ export const Table = () => {
           </tr>
         </thead>
         <tbody>
-          {teachers.map((teacher, index) => (
+          {teacherss.map((teacher, index) => (
             <tr key={index}>
               <td>{teacher.name}</td>
               <td>{teacher.position}</td>

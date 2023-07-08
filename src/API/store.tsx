@@ -1,13 +1,6 @@
-import { combineReducers } from "redux";
-import { configureStore } from "@reduxjs/toolkit";
-import { tableReducer } from "./reducer";
+import { createStore } from "redux";
+import rootReducer from "./reducer.tsx";
 
-const rootReducer = combineReducers({
-  table: tableReducer,
-});
-
-const store = configureStore({
-  reducer: rootReducer,
-});
+const store = createStore(rootReducer);
 
 export default store;

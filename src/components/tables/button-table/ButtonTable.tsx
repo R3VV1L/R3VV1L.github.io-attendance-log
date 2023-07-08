@@ -2,10 +2,11 @@ import "./ButtonTable.css";
 import { ArrowRight } from "../../../assets/arrows/ArrowRight.tsx";
 import { ArrowLeft } from "../../../assets/arrows/ArrowLeft.tsx";
 import { useSelector } from "react-redux";
+import { RootState } from "@reduxjs/toolkit/dist/query/core/apiState";
 
 export const ButtonTable = () => {
   // @ts-ignore
-  const tableLength = useSelector((state) => state.tableLength);
+  const tableLength = useSelector((state: RootState) => state.tableLength);
 
   return (
     <div className="button-table">
@@ -21,7 +22,9 @@ export const ButtonTable = () => {
       <button className="btn-arl">
         <ArrowLeft />
       </button>
-      <div className="text">{tableLength}</div>
+      <div className="text">
+        {tableLength} из {tableLength}
+      </div>
     </div>
   );
 };
