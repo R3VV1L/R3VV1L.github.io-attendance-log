@@ -1,16 +1,17 @@
 import "./Search.css";
 import { Magnifier } from "../../assets/magnifier/Magnifier.tsx";
+import { useState } from "react";
 
-export const Search = () => {
-  // const [searchResults, setSearchResults] = useState([]);
-  //
-  // const handleSearch = (event) => {
-  //   const query = event.target.value;
-  //   fetch(`https://api.example.com/search?q=${query}`)
-  //     .then((response) => response.json())
-  //     .then((data) => setSearchResults(data.results))
-  //     .catch((error) => console.error(error));
-  // };
+interface SearchProps {
+  onSearch: (query: string) => void;
+}
+
+export const Search = ({ onSearch }: SearchProps) => {
+  const [query, setQuery] = useState("");
+
+  const handleSearch = () => {
+    onSearch(query);
+  };
 
   return (
     <div className="box">
@@ -22,21 +23,15 @@ export const Search = () => {
               type="search"
               placeholder="Поиск..."
               required
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
             />
-            <button
-              className="box-magnifier"
-              onClick={() => console.log("click-click")}
-            >
+            <button className="box-magnifier" onClick={handleSearch}>
               <Magnifier />
             </button>
           </div>
         </div>
       </div>
-      {/*<ul>*/}
-      {/*  {searchResults.map((result) => (*/}
-      {/*    <li key={result.id}>{result.title}</li>*/}
-      {/*  ))}*/}
-      {/*</ul>*/}
     </div>
   );
 };
