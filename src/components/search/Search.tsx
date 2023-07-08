@@ -20,28 +20,22 @@ export const Search = ({ onSearch }: SearchProps) => {
     };
 
     return (
-        <div className="box">
-            <div className="box-frame-wrapper">
-                <div className="box-frame">
-                    <div className="box-div">
-                        <input
-                            className="box-text-wrapper"
-                            type="search"
-                            placeholder="Поиск..."
-                            required
-                            value={query}
-                            onChange={(event) => setQuery(event.target.value)}
-                            onKeyPress={handleKeyPress}
-                        />
-                        <button
-                            className="box-magnifier"
-                            onClick={handleSearch}
-                        >
-                            <Magnifier />
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+           <form className="search-box">
+               <input
+                    className="box-text-wrapper"
+                    type="search"
+                    placeholder="Поиск..."
+                    required
+                    value={query}
+                    onChange={(event) => setQuery(event.target.value)}
+                    onKeyPress={handleKeyPress}
+                />
+        <button
+          className="search-bottom"
+          onClick={() => console.log("click-click")}
+        >
+          <Magnifier />
+        </button>
+    </form>
     );
 };
