@@ -1,5 +1,7 @@
 .burger-menu {
-    position: fixed;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0;
     z-index: 1000;
 }
 
@@ -54,8 +56,6 @@
 
 .block-menu {
     position: absolute;
-    right: 0;
-    width: 100%;
     animation-duration: 0.5s;
     animation-name: slide-in;
     animation-fill-mode: forwards;

@@ -1,35 +1,33 @@
 header {
   width: 100%;
-  height: 80px;
+  height: 64px;
   background-color: #fff;
-  align-items: center;
 }
 
 .navbar {
   height: 100%;
   padding: 0 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar-logotype {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
+.navbar-menu {
+  width: 30px;
 }
 
-.navbar-logotype-text {
-  padding: 0 16px;
-  text-decoration: none;
+.navbar-profile-name {
+  margin: 0;
+  padding: 0 0;
   color: #000;
+  font-size: 16px;
+  font-weight: 600
 }
 
-.navbar-profile {
-  display: inline-block;
-  height: 100%;
-}
-
-.navbar-profile-text {
-  padding: 0 16px;
-  text-decoration: none;
-  color: #000;
-  display: inline-block;
+.navbar-profile-mail {
+  margin: 0;
+  padding: 0 0;
+  color: #333;
+  font-size: 12px;
+  font-weight: 300;
 }
