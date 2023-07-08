@@ -1,6 +1,7 @@
 button {
     cursor: pointer;
 }
+
 .button-page-fill {
     box-sizing: border-box;
     color: #ffffff;
@@ -19,6 +20,7 @@ button {
     width: 270px;
     height: 48px;
 }
+
 .button-page-empty {
     box-sizing: border-box;
     border-radius: 24px;
@@ -38,10 +40,12 @@ button {
     text-align: left;
     font: 500 16px/16px 'Outfit', sans-serif;
 }
+
 .button-modal {
     box-sizing: border-box;
     background: #1279be;
     border-radius: 24px;
+    border: none;
     padding: 10px;
     display: flex;
     flex-direction: row;
