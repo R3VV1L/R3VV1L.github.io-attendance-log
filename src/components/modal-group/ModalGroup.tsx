@@ -31,6 +31,25 @@ export const ModalGroup = () => {
                     <div className="modal-group-content">
                         <div className="close" onClick={handleCloseModal}></div>
                         <div className="title">Добавление преподавателя</div>
+                        <div className="modal-name">
+                            ФИО <input className="input-name" />
+                        </div>
+                        <div className="modal-name">
+                            Должность <input className="input-name" />
+                        </div>
+                        <div className="modal-name">
+                            Кафедра <input className="input-name" />
+                        </div>
+                        <div className="modal-name">
+                            E-mail <input className="input-name" />
+                        </div>
+                        <div className="modal-name">
+                            Логин <input className="input-name" />
+                        </div>
+                        <div className="modal-name">
+                            Пароль <input className="input-name" />
+                        </div>
+
                         <Button
                             title="Добавить"
                             size="modal"

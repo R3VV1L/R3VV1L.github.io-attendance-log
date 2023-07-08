@@ -6,19 +6,18 @@
     border-radius: 8px;
 }
 
-
 /* Style the search field */
 .search-box-text {
     height: inherit;
     padding: 10px 40px 10px 10px; /* Add space for the search button */
-    font-size: 16px; 
+    font-size: 16px;
     border: none;
     border-radius: 8px;
     float: left;
     width: 100%;
-  }
+}
 
-  .search-box-text::-webkit-search-cancel-button {
+.search-box-text::-webkit-search-cancel-button {
     position: relative;
     right: 20px;
     width: 16px;
@@ -27,10 +26,10 @@
     opacity: 0.5;
     cursor: pointer;
     background-color: rgb(255, 0, 0);
-    }
-  
-  /* Style the submit button */
-  .search-bottom {
+}
+
+/* Style the submit button */
+.search-bottom {
     width: 48px;
     height: inherit;
     position: absolute;
@@ -42,20 +41,14 @@
     font-size: 17px;
     border: none;
     border-radius: 0 8px 8px 0;
+}
 
- 
-  }
-  
-
-  
-  /* Clear floats */
-  .search-box::after {
-    content: "";
+/* Clear floats */
+.search-box::after {
+    content: '';
     clear: both;
     display: table;
-  }
-
-
+}
 
 /* .box {
     background-color: transparent;
