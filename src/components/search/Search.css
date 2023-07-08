@@ -1,49 +1,61 @@
 .search-box {
     height: 48px;
-    /* padding: 10px; */
     position: relative;
     display: inline-block;
     background: #fff;
     border-radius: 8px;
 }
 
+
 /* Style the search field */
 .search-box-text {
     height: inherit;
-    padding-right: 40px; /* Add space for the search button */
-    font-size: 16px;
+    padding: 10px 40px 10px 10px; /* Add space for the search button */
+    font-size: 16px; 
     border: none;
     border-radius: 8px;
     float: left;
     width: 100%;
-}
+  }
 
-/* Style the submit button */
-.search-bottom {
+  .search-box-text::-webkit-search-cancel-button {
+    position: relative;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+    }
+  
+  /* Style the submit button */
+  .search-bottom {
     width: 48px;
     height: inherit;
     position: absolute;
     top: 0;
     right: 0;
     padding: 10px;
-    background: #fff;
+    background: none;
     color: white;
     font-size: 17px;
     border: none;
     border-radius: 0 8px 8px 0;
-    cursor: pointer;
-}
 
-.search-bottom:hover {
-    background: #0b7dda;
-}
+ 
+  }
+  
 
-/* Clear floats */
-.search-box::after {
-    content: '';
+  
+  /* Clear floats */
+  .search-box::after {
+    content: "";
     clear: both;
     display: table;
-}
+  }
+
+
 
 /* .box {
     background-color: transparent;
