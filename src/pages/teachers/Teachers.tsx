@@ -8,12 +8,12 @@ import { ModalGroup } from "../../components/modal-group/ModalGroup.tsx";
 export const Teachers = () => {
   return (
     <div>
+      <div className="prep-text">
+        <p>Преподаватели</p>
+      </div>
       <div className="search">
         <Search />
       </div>
-      {/* <div className="prep-text">
-        <p>Преподаватели</p>
-      </div> */}
       <ModalGroup />
       <Table />
     </div>
