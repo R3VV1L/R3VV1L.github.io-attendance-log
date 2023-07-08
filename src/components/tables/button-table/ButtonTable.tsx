@@ -9,15 +9,16 @@ export const ButtonTable = () => {
 
   return (
     <div className="button-table">
-      <div className="button-table-border"></div>
+      <div className="button-table-border" />
       <button
+        className="btn-arr"
         onClick={() => {
           console.log("pipop");
         }}
       >
         <ArrowRight />
       </button>
-      <button>
+      <button className="btn-arl">
         <ArrowLeft />
       </button>
       <div className="text">{tableLength}</div>
