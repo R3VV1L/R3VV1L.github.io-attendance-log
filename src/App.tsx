@@ -8,20 +8,24 @@ import { Subgroups } from "./pages/subgroups/Subgroups.tsx";
 import { Students } from "./pages/students/Students.tsx";
 import { Teachers } from "./pages/teachers/Teachers.tsx";
 import { Layout } from "./components/layouts/Layout.tsx";
+import { Provider } from "react-redux";
+import store from "./API/store.tsx";
 
 function App() {
   return (
-    <Routes>
-      <Route path="attendance" element={<Layout />}>
-        <Route path="teachers" element={<Teachers />} />
-        <Route path="groups" element={<Groups />} />
-        <Route path="subgroups" element={<Subgroups />} />
-        <Route path="students" element={<Students />} />
-      </Route>
-      <Route path="auth" element={<Authorization />} />
-      <Route path="recovery" element={<Recovery />} />
-      <Route path="*" element={<NotFound />} /> {/* add the 404 route */}
-    </Routes>
+    <Provider store={store}>
+      <Routes>
+        <Route path="attendance" element={<Layout />}>
+          <Route path="teachers" element={<Teachers />} />
+          <Route path="groups" element={<Groups />} />
+          <Route path="subgroups" element={<Subgroups />} />
+          <Route path="students" element={<Students />} />
+        </Route>
+        <Route path="auth" element={<Authorization />} />
+        <Route path="recovery" element={<Recovery />} />
+        <Route path="*" element={<NotFound />} /> {/* add the 404 route */}
+      </Routes>
+    </Provider>
   );
 }
 
