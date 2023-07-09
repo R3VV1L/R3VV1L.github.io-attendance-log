@@ -9,11 +9,11 @@ export const Teachers = () => {
             <div className="teachers-title">
                 <p>Преподаватели</p>
             </div>
-            <section className='ModalGroup'>
+            <section className="ModalGroup">
                 <ModalGroup />
             </section>
             <Table />
-            <section className='button-table'>
+            <section className="button-table">
                 <ButtonTable />
             </section>
         </div>

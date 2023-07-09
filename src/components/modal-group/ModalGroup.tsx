@@ -15,65 +15,68 @@ export const ModalGroup = () => {
 
     return (
         <>
-            <Button
-                title="Добавить"
-                size="page-fill"
-                onClick={handleOpenModal}
-            />
-            <Button
-                title="Редактировать"
-                size="page-empty"
-                onClick={() => {}}
-            />
-            <Button title="Удалить" size="page-empty" onClick={() => {}} />
+            <div className="section-modal-group">
+                <Button
+                    title="Добавить"
+                    size="page-fill"
+                    onClick={handleOpenModal}
+                />
+                <Button
+                    title="Редактировать"
+                    size="page-empty"
+                    onClick={() => {}}
+                />
+                <Button title="Удалить" size="page-empty" onClick={() => {}} />
+            </div>
+
             {showModal && (
                 <div className="modal-group">
                     <div className="modal-group-content">
                         <div className="close" onClick={handleCloseModal}>
-                            <span className='close-icon' />
-                            <span className='close-icon' />
+                            <span className="close-icon" />
+                            <span className="close-icon" />
                         </div>
                         <div className="title">Добавление преподавателя</div>
                         <div className="modal-name">
                             <p className="subtitle">ФИО</p>
-                            <input 
+                            <input
                                 className="input-name"
-                                placeholder='Не заполнено'
+                                placeholder="Не заполнено"
                             />
                         </div>
                         <div className="modal-name">
                             <p className="subtitle">Должность</p>
-                            <input 
+                            <input
                                 className="input-name"
-                                placeholder='Не выбрано'
+                                placeholder="Не выбрано"
                             />
                         </div>
                         <div className="modal-name">
                             <p className="subtitle">Кафедра</p>
-                            <input 
+                            <input
                                 className="input-name"
-                                placeholder='Не выбрано'
+                                placeholder="Не выбрано"
                             />
                         </div>
                         <div className="modal-name">
                             <p className="subtitle">E-mail</p>
-                            <input 
+                            <input
                                 className="input-name"
-                                placeholder='Не заполнено'
+                                placeholder="Не заполнено"
                             />
                         </div>
                         <div className="modal-name">
-                            <p className="subtitle">Логин</p> 
-                            <input 
+                            <p className="subtitle">Логин</p>
+                            <input
                                 className="input-name"
-                                placeholder='Не заполнено'
+                                placeholder="Не заполнено"
                             />
                         </div>
                         <div className="modal-name">
                             <p className="subtitle">Пароль</p>
-                            <input 
-                                className="input-name" 
-                                placeholder='Не заполнено'
+                            <input
+                                className="input-name"
+                                placeholder="Не заполнено"
                             />
                         </div>
 

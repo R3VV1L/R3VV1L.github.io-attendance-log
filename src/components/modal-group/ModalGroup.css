@@ -45,7 +45,7 @@
 
 .close-icon:last-child {
     transform: translate(-50%, -50%) rotate(45deg);
-  }
+}
 
 .title {
     padding: 0 0 30px 0;
@@ -57,7 +57,7 @@
 .modal-name {
     padding: 0 0 20px 0;
     text-align: left;
-    font: 300 16px "Outfit", sans-serif;
+    font: 300 16px 'Outfit', sans-serif;
     display: flex;
     justify-content: space-between;
 }
@@ -78,9 +78,8 @@
     border-radius: 8px;
     border: none;
     padding: 0 20px;
-    width: 415px;
     height: 48px;
-    font: 400 16px "Outfit", sans-serif;
+    font: 400 16px 'Outfit', sans-serif;
     color: #000;
 }
 
@@ -90,4 +89,9 @@
 
 .buttom-modal {
     padding: 40px;
+}
+
+.section-modal-group {
+    display: flex;
+    justify-content: flex-end;
 }
