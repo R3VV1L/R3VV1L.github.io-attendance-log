@@ -7,10 +7,9 @@
     border-radius: 8px;
 }
 
-/* Style the search field */
 .search-box-text {
     height: inherit;
-    padding: 10px 48px 10px 20px; /* Add space for the search button */
+    padding: 10px 40px 10px 20px; /* Add space for the search button */
     font-size: 16px;
     border: none;
     border-radius: 8px;
@@ -19,17 +18,13 @@
 }
 
 .search-box-text::-webkit-search-cancel-button {
+    -webkit-appearance: none;
     position: relative;
-    right: 20px;
-    width: 16px;
-    height: 16px;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    cursor: pointer;
-    background-color: rgb(255, 0, 0);
+    right: 16px;
+    background-repeat: no-repeat ;
+    opacity: 1;
 }
 
-/* Style the submit button */
 .search-bottom {
     width: 48px;
     height: inherit;
@@ -44,95 +39,9 @@
     border-radius: 0 8px 8px 0;
 }
 
-/* Clear floats */
 .search-box::after {
     content: '';
     clear: both;
     display: table;
 }
 
-/* .box {
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
-
-.box-frame-wrapper {
-    border: 0 none;
-    height: 48px;
-    width: 415px;
-}
-
-.box-frame {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    left: 0;
-    width: 415px;
-
-}
-
-.box-div {
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 8px;
-    display: flex;
-    gap: 10px;
-    height: 20px;
-    padding: 20px 14px;
-    position: relative;
-    width: 415px;
-}
-
-.box-text-wrapper {
-    color: #41414380;
-    flex: 1;
-    font-family: "Outfit-Regular", Helvetica, serif;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.16px;
-    line-height: normal;
-    margin-bottom: -5px;
-    margin-top: -7px;
-    position: relative;
-    border: none
-}
-
-.box-magnifier {
-    display: block;
-    margin: 0 auto;
-    border: 1px #ccc;
-    border-radius: 5px;
-    padding: 5px 10px;
-    background-color: #fff;
-    cursor: pointer;
-}
-
-.box-magnifier:hover {
-    display: block;
-    margin: 0 auto;
-    border: 1px #ccc;
-    border-radius: 5px;
-    padding: 5px 10px;
-    background-color: #ccc;
-    cursor: pointer;
-}
-
-.box-vector {
-    height: 20px;
-    left: 1414px;
-    position: absolute;
-    top: -4346px;
-    width: 20px;
-}
-
-.box-icon {
-    height: 17px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 17px;
-} */
