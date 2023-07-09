@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Authorization } from './pages/authorization/Authorization.tsx';
 import { Recovery } from './pages/recovery/Recovery.tsx';
@@ -21,9 +21,10 @@ function App() {
                     <Route path="subgroups" element={<Subgroups />} />
                     <Route path="students" element={<Students />} />
                 </Route>
+                <Route path="/" element={<Navigate to="/auth" />} />
                 <Route path="auth" element={<Authorization />} />
                 <Route path="recovery" element={<Recovery />} />
-                <Route path="*" element={<NotFound />} />{' '}
+                <Route path="*" element={<NotFound />} />
                 {/* add the 404 route */}
             </Routes>
         </Provider>
