@@ -6,12 +6,16 @@ import { ButtonTable } from '../../components/tables/button-table/ButtonTable.ts
 export const Teachers = () => {
     return (
         <div>
-            <div className="prep-text">
+            <div className="teachers-title">
                 <p>Преподаватели</p>
             </div>
-            <ModalGroup />
+            <section className='ModalGroup'>
+                <ModalGroup />
+            </section>
             <Table />
-            <ButtonTable />
+            <section className='button-table'>
+                <ButtonTable />
+            </section>
         </div>
     );
 };

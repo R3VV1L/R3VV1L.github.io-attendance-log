@@ -183,7 +183,7 @@ export const Table = () => {
                             <td>{teacher.department}</td>
                             <td>{teacher.email}</td>
                             <td>{teacher.login}</td>
-                            <td>{teacher.password}</td>
+                            <td>{teacher.password}</td> 
                         </tr>
                     ))}
                 </tbody>

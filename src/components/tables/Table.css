@@ -5,7 +5,8 @@ table {
 }
 
 th {
-    width: 15%;
+    width: 50%;
+    height: 28px;
     padding: 8px 20px;
     background: #1279be;
     color: #fff;
@@ -20,6 +21,7 @@ th:last-child {
 }
 
 td {
+    min-height: 28px;
     padding: 8px 20px;
     text-align: left;
     background: #fff;
