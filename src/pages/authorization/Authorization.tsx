@@ -27,10 +27,10 @@ export const Authorization = () => {
     };
 
     return (
-        <div className="auth-block">
+        <section className="auth-section">
             <SguSvg />
-            <p className="auth-block-head-text">Вход в личный кабинет</p>
-            <p className="auth-block-info-text">
+            <p className="auth-head-text">Вход в личный кабинет</p>
+            <p className="auth-info-text">
                 Введите данные вашей учетной записи
             </p>
             <form className="auth-style" action="#" method="post">
@@ -57,9 +57,9 @@ export const Authorization = () => {
                     <label>Пароль</label>
                 </div>
             </form>
-            <div className="auth-block-submit">
+            <div className="auth-submit">
                 <button
-                    className="auth-block-submit-button"
+                    className="auth-submit-button"
                     type="submit"
                     name="auth-submit"
                     onClick={handleLogin}
@@ -67,9 +67,9 @@ export const Authorization = () => {
                     Войти
                 </button>
             </div>
-            <NavLink to="/recovery" className="auth-block-forgot-text">
+            <NavLink to="/recovery" className="auth-forgot-text">
                 Забыли пароль?
             </NavLink>
-        </div>
+        </section>
     );
 };

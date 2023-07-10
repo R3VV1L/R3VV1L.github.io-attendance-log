@@ -10,20 +10,21 @@ export const ButtonTable = () => {
 
     return (
         <div className="button-table">
-            <div className="button-table-border" />
-            <button className="btn-arl">
-                <ArrowLeft />
-            </button>
-            <button
-                className="btn-arr"
-                onClick={() => {
-                    console.log('pipop');
-                }}
-            >
-                <ArrowRight />
-            </button>
-            <div className="button-table-text">
-                {tableLength} из {tableLength}
+            <div className="button-table-border">
+                <button className="btn-arl">
+                    <ArrowLeft />
+                </button>
+                <button
+                    className="btn-arr"
+                    onClick={() => {
+                        console.log('pipop');
+                    }}
+                >
+                    <ArrowRight />
+                </button>
+                <div className="button-table-text">
+                    {tableLength} из {tableLength}
+                </div>
             </div>
         </div>
     );

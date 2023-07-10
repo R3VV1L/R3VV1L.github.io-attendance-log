@@ -6,38 +6,39 @@ import { NavLink } from 'react-router-dom';
 
 export const Recovery = () => {
     return (
-        <div className="forgot-block">
+        <section className="forgot-section">
             <div className="svg-container">
                 <SguSvg />
             </div>
-            <p className="forgot-block-head-text">Восстановление пароля</p>
-            <p className="forgot-block-info-text">
+            <p className="forgot-head-text">Восстановление пароля</p>
+            <p className="forgot-info-text">
                 Введите ваш email для отправки инструкции по восстановлению
                 пароля
             </p>
             <form className="forgot-style" action="#" method="post">
-                <div className="forgot-pass">
+                <div className="forgot-input">
                     <input
-                        className="email-input-text"
+                        className="input-text"
                         type="email"
                         name="forgot-pass"
-                        placeholder="Адрес эл. почты"
+                        placeholder=" "
                         required
                     />
+                    <label>Адрес эл. почты</label>
                 </div>
             </form>
-            <div className="forgot-block-submit">
-                <NavLink to="/auth" className="forgot-block-auth-text">
-                    На страницу входа
-                </NavLink>
+            <div className="forgot-submit">
                 <button
-                    className="forgot-block-submit-button"
+                    className="forgot-submit-button"
                     type="submit"
                     name="forgot-submit"
                 >
                     Отправить
                 </button>
+                <NavLink to="/auth" className="forgot-back-text">
+                    На страницу входа
+                </NavLink>
             </div>
-        </div>
+        </section>
     );
 };
