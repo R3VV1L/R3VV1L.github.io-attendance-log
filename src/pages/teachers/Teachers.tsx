@@ -9,13 +9,9 @@ export const Teachers = () => {
             <div className="teachers-title">
                 <p>Преподаватели</p>
             </div>
-            <section className="ModalGroup">
-                <ModalGroup />
-            </section>
+            <ModalGroup />
             <Table />
-            <section className="button-table">
-                <ButtonTable />
-            </section>
+            <ButtonTable />
         </div>
     );
 };
