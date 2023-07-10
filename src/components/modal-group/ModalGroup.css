@@ -92,6 +92,10 @@
 }
 
 .section-modal-group {
+    width: 50%;
+    right: 0;
+    padding: 0 250px 0 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    position: absolute;
 }

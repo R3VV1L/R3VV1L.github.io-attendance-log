@@ -1,7 +1,7 @@
 table {
     border-collapse: collapse;
     font-size: 12px;
-    width: 100%;
+
 }
 
 th {
@@ -39,5 +39,5 @@ td:last-child {
 }
 
 .teacher-table {
-    padding: 0 270px;
+    padding: 0 250px;
 }

@@ -11,6 +11,9 @@ export const ButtonTable = () => {
     return (
         <div className="button-table">
             <div className="button-table-border" />
+            <button className="btn-arl">
+                <ArrowLeft />
+            </button>
             <button
                 className="btn-arr"
                 onClick={() => {
@@ -19,10 +22,7 @@ export const ButtonTable = () => {
             >
                 <ArrowRight />
             </button>
-            <button className="btn-arl">
-                <ArrowLeft />
-            </button>
-            <div className="text">
+            <div className="button-table-text">
                 {tableLength} из {tableLength}
             </div>
         </div>
