@@ -1,0 +1,36 @@
+.send-section {
+    display: block;
+    width: 400px;
+    height: 700px;
+    margin: auto;
+    margin-top: 30px;
+    background: #f5f5f7;
+}
+
+.send-head-text {
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 24px;
+    font-family: Outfit, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.32px;
+    color: #000;
+}
+
+.send-info-text {
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: Outfit, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.send-back-text {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #1279be;
+}

@@ -1,10 +1,10 @@
 // @ts-ignore
 import React from 'react';
-import './Recovery.css';
 import { SguSvg } from '../../assets/SguSvg.tsx';
 import { NavLink } from 'react-router-dom';
+import './PassRecovery.css';
 
-export const Recovery = () => {
+export const PassRecovery = () => {
     return (
         <section className="forgot-section">
             <div className="svg-container">

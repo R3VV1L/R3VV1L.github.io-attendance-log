@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Authorization.css';
 import { SguSvg } from '../../assets/SguSvg.tsx';
 import { NavLink } from 'react-router-dom';
+import './Authorization.css';
 
 type User = {
     username: string;
@@ -67,7 +67,7 @@ export const Authorization = () => {
                     Войти
                 </button>
             </div>
-            <NavLink to="/recovery" className="auth-forgot-text">
+            <NavLink to="/pass-recovery" className="auth-forgot-text">
                 Забыли пароль?
             </NavLink>
         </section>

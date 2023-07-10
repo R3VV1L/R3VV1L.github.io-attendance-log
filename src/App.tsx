@@ -1,7 +1,9 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Authorization } from './pages/authorization/Authorization.tsx';
-import { Recovery } from './pages/recovery/Recovery.tsx';
+import { PassRecovery } from './pages/pass-recovery/PassRecovery.tsx';
+import { PassSend } from './pages/pass-send/PassSend.tsx';
+import { PassReset } from './pages/pass-reset/PassReset.tsx';
 import { NotFound } from './pages/not-found/NotFound.tsx';
 import { Groups } from './pages/groups/Groups.tsx';
 import { Subgroups } from './pages/subgroups/Subgroups.tsx';
@@ -23,7 +25,9 @@ function App() {
                 </Route>
                 <Route path="/" element={<Navigate to="/auth" />} />
                 <Route path="auth" element={<Authorization />} />
-                <Route path="recovery" element={<Recovery />} />
+                <Route path="pass-recovery" element={<PassRecovery />} />
+                <Route path="pass-send" element={<PassSend />} />
+                <Route path="pass-reset" element={<PassReset />} />
                 <Route path="*" element={<NotFound />} />
                 {/* add the 404 route */}
             </Routes>
