@@ -1,7 +1,15 @@
 // @ts-ignore
 import React from 'react';
+import { ButtonTable } from '../../components/tables/button-table/ButtonTable';
 import './Attendance.css';
 
 export const Attendance = () => {
-    return <div>Attendance</div>;
+    return (
+        <div>
+            <div className="students-title">
+                <p>Посещаемость</p>
+            </div>
+            <ButtonTable />
+        </div>
+    );
 };

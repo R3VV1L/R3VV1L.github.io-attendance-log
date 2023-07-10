@@ -1,9 +1,8 @@
 .arrow-right {
-    position: absolute;
     overflow: visible;
+
 }
+
 .arrow-left {
-    position: absolute;
-    transform: translate(-8px, 0px);
     overflow: visible;
 }

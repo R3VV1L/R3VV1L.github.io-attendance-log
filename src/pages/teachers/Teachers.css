@@ -2,14 +2,14 @@
     padding: 0 400px;
 }
 
-.ModalGroup .button-page-fill {
+.button-page-fill {
+    margin: 0 20px 0 0;
 }
 
 .button-page-empty {
+    margin: 0 20px 0 0;
 }
 
-.button-modal {
-}
 
 .teachers-title {
     max-width: 100%;
