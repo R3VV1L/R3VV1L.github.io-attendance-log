@@ -42,7 +42,7 @@ export const Groups = () => {
                 <p>Группы</p>
             </div>
             <ModalGroup />
-            <Table data={data} user="teacher" />
+            <Table data={data} user="group" />
             <ButtonTable />
         </div>
     );
