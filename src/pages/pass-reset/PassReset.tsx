@@ -1,4 +1,3 @@
-// @ts-ignore
 import React, { useState } from 'react';
 import { SguSvg } from '../../assets/SguSvg.tsx';
 import { NavLink } from 'react-router-dom';
@@ -41,20 +40,20 @@ export const PassReset: React.FC = () => {
                 Чтобы войти в систему, укажите новый пароль
             </p>
             <form className="reset-form" action="#" method="post">
-                <label className='reset-text-label'>Новый пароль</label>
-                    <input
-                        className="reset-input"
-                        type="password"
-                        name="reset-pass"
-                        placeholder="Введите пароль"
-                        required
-                        value={password1}
-                        onChange={handleInputChange}
-                        onFocus={handleInputFocus}
-                        onBlur={handleInputBlur}
+                <label className="reset-text-label">Новый пароль</label>
+                <input
+                    className="reset-input"
+                    type="password"
+                    name="reset-pass"
+                    placeholder="Введите пароль"
+                    required
+                    value={password1}
+                    onChange={handleInputChange}
+                    onFocus={handleInputFocus}
+                    onBlur={handleInputBlur}
                 />
-                <label className='reset-text-label'>Повторите пароль</label>
-                    <input
+                <label className="reset-text-label">Повторите пароль</label>
+                <input
                     className="reset-input"
                     type="password"
                     name="reset-pass"
@@ -64,7 +63,7 @@ export const PassReset: React.FC = () => {
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}
-                 />
+                />
             </form>
             <div className="reset-submit">
                 <button

@@ -15,7 +15,7 @@ export const ModalGroup = () => {
 
     return (
         <>
-            <div className="section-modal-group">
+            <section className="modal-group-section">
                 <Button
                     title="Добавить"
                     size="page-fill"
@@ -27,53 +27,70 @@ export const ModalGroup = () => {
                     onClick={() => {}}
                 />
                 <Button title="Удалить" size="page-empty" onClick={() => {}} />
-            </div>
+            </section>
 
             {showModal && (
                 <div className="modal-group">
-                    <div className="modal-group-content">
-                        <div className="close" onClick={handleCloseModal}>
+                    <div className="modal-content">
+                        <div
+                            className="close-button"
+                            onClick={handleCloseModal}
+                        >
                             <span className="close-icon" />
                             <span className="close-icon" />
                         </div>
-                        <div className="title">Добавление преподавателя</div>
+                        <div className="modal-title">
+                            Добавление преподавателя
+                        </div>
                         <div className="modal-name">
-                            <p className="subtitle">ФИО</p>
+                            <label className="modal-subtitle">ФИО</label>
                             <input
                                 className="input-name"
                                 placeholder="Не заполнено"
                             />
                         </div>
                         <div className="modal-name">
-                            <p className="subtitle">Должность</p>
-                            <input
-                                className="input-name"
-                                placeholder="Не выбрано"
-                            />
+                            <label className="modal-subtitle">Должность</label>
+                            <select className="input-name">
+                                <option value="" disabled selected hidden>
+                                    Не выбрано
+                                </option>
+                                <option value="option1">Зав. кафедрой</option>
+                                <option value="option2">
+                                    Старший преподаватель
+                                </option>
+                                <option value="option3">
+                                    Старший преподаватель
+                                </option>
+                            </select>
                         </div>
                         <div className="modal-name">
-                            <p className="subtitle">Кафедра</p>
-                            <input
-                                className="input-name"
-                                placeholder="Не выбрано"
-                            />
+                            <label className="modal-subtitle">Кафедра</label>
+                            <select className="input-name">
+                                <option value="" disabled selected hidden>
+                                    Не выбрано
+                                </option>
+                                <option value="option4">ИТиМ</option>
+                                <option value="option5">ПиД</option>
+                                <option value="option6">СПФ</option>
+                            </select>
                         </div>
                         <div className="modal-name">
-                            <p className="subtitle">E-mail</p>
+                            <label className="modal-subtitle">Эл. адрес</label>
                             <input
                                 className="input-name"
                                 placeholder="Не заполнено"
                             />
                         </div>
                         <div className="modal-name">
-                            <p className="subtitle">Логин</p>
+                            <label className="modal-subtitle">Логин</label>
                             <input
                                 className="input-name"
                                 placeholder="Не заполнено"
                             />
                         </div>
                         <div className="modal-name">
-                            <p className="subtitle">Пароль</p>
+                            <label className="modal-subtitle">Пароль</label>
                             <input
                                 className="input-name"
                                 placeholder="Не заполнено"

@@ -6,7 +6,7 @@ import './PassRecovery.css';
 
 export const PassRecovery: React.FC = () => {
     const [email, setMail] = useState('');
-    
+
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setMail(event.target.value);
     };
@@ -30,11 +30,11 @@ export const PassRecovery: React.FC = () => {
             </div>
             <p className="recovery-head-text">Восстановление пароля</p>
             <p className="recovery-info-text">
-                Введите адрес вашей электронной почты для отправки 
-                инструкции по восстановлению пароля
+                Введите адрес вашей электронной почты для отправки инструкции по
+                восстановлению пароля
             </p>
             <form className="recovery-form" action="#" method="post">
-                <label className='recovery-text-label'>Адрес эл. почты</label>
+                <label className="recovery-text-label">Адрес эл. почты</label>
                 <input
                     className="recovery-input"
                     type="email"
