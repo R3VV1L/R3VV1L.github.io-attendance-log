@@ -7,13 +7,13 @@
         {
             "files": "*.css",
             "options": {
-            "parser": "css"
+                "parser": "css"
             }
         },
         {
             "files": "*.tsx",
             "options": {
-            "parser": "typescript"
+                "parser": "typescript"
             }
         }
     ]
