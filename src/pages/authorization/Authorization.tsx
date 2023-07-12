@@ -52,14 +52,12 @@ export const Authorization: React.FC = () => {
     return (
         <section className="auth-section">
             <SguSvg />
-            <p className="auth-head-text">
-                Вход в личный кабинет
-            </p>
+            <p className="auth-head-text">Вход в личный кабинет</p>
             <p className="auth-info-text">
                 Введите данные вашей учетной записи
             </p>
             <form className="auth-form" action="#" method="post">
-                <label className='auth-text-label'>Логин</label>
+                <label className="auth-text-label">Логин</label>
                 <input
                     className="auth-input"
                     type="email"
@@ -71,7 +69,7 @@ export const Authorization: React.FC = () => {
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}
                 />
-                <label className='auth-text-label'>Пароль</label>
+                <label className="auth-text-label">Пароль</label>
                 <input
                     className="auth-input"
                     type="password"
