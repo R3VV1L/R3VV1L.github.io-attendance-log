@@ -8,13 +8,20 @@ type User = {
     password: string;
 };
 
-export const Authorization = () => {
+export const Authorization: React.FC = () => {
     const [user, setUser] = useState<User>({ username: '', password: '' });
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
         setUser((prevUser) => ({ ...prevUser, [name]: value }));
+        if (name === 'auth-email') {
+            setEmail(value);
+        } else if (name === 'auth-pass') {
+            setPassword(value);
+        }
     };
 
     const handleLogin = () => {
@@ -26,36 +33,56 @@ export const Authorization = () => {
         }
     };
 
+    const handleInputFocus = (event: React.FocusEvent<HTMLInputElement>) => {
+        if (!event.target.value) {
+            event.target.placeholder = '';
+        }
+    };
+
+    const handleInputBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+        if (!event.target.value) {
+            if (event.target.name === 'auth-email') {
+                event.target.placeholder = 'Введите логин';
+            } else if (event.target.name === 'auth-pass') {
+                event.target.placeholder = 'Введите пароль';
+            }
+        }
+    };
+
     return (
         <section className="auth-section">
             <SguSvg />
-            <p className="auth-head-text">Вход в личный кабинет</p>
+            <p className="auth-head-text">
+                Вход в личный кабинет
+            </p>
             <p className="auth-info-text">
                 Введите данные вашей учетной записи
             </p>
-            <form className="auth-style" action="#" method="post">
-                <div className="auth-input">
-                    <input
-                        className="input-text"
-                        type="email"
-                        name="auth-email"
-                        placeholder=" "
-                        required
-                        onChange={handleInputChange}
-                    />
-                    <label>Адрес эл. почты</label>
-                </div>
-                <div className="auth-input">
-                    <input
-                        className="input-text"
-                        type="password"
-                        name="auth-pass"
-                        placeholder=" "
-                        required
-                        onChange={handleInputChange}
-                    />
-                    <label>Пароль</label>
-                </div>
+            <form className="auth-form" action="#" method="post">
+                <label className='auth-text-label'>Логин</label>
+                <input
+                    className="auth-input"
+                    type="email"
+                    name="auth-email"
+                    placeholder="Введите Логин"
+                    required
+                    value={email}
+                    onChange={handleInputChange}
+                    onFocus={handleInputFocus}
+                    onBlur={handleInputBlur}
+                />
+                <label className='auth-text-label'>Пароль</label>
+                <input
+                    className="auth-input"
+                    type="password"
+                    name="auth-pass"
+                    placeholder="Введите Пароль"
+                    required
+                    value={password}
+                    onChange={handleInputChange}
+                    onFocus={handleInputFocus}
+                    onBlur={handleInputBlur}
+                />
             </form>
             <div className="auth-submit">
                 <button
@@ -68,7 +95,7 @@ export const Authorization = () => {
                 </button>
             </div>
             <NavLink to="/pass-recovery" className="auth-forgot-text">
-                Забыли пароль?
+                Забыли логин или пароль?
             </NavLink>
         </section>
     );

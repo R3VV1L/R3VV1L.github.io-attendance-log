@@ -1,52 +1,81 @@
 // @ts-ignore
-import React from 'react';
+import React, { useState } from 'react';
 import { SguSvg } from '../../assets/SguSvg.tsx';
 import { NavLink } from 'react-router-dom';
 import './PassReset.css';
 
-export const PassReset = () => {
+export const PassReset: React.FC = () => {
+    const [password1, setPassword1] = useState('');
+    const [password2, setPassword2] = useState('');
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = event.target;
+        if (name === 'reset-pass') {
+            setPassword1(value);
+        } else if (name === 'reset-pass2') {
+            setPassword2(value);
+        }
+    };
+
+    const handleInputFocus = (event: React.FocusEvent<HTMLInputElement>) => {
+        if (!event.target.value) {
+            event.target.placeholder = '';
+        }
+    };
+
+    const handleInputBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+        if (!event.target.value) {
+            if (event.target.name === 'reset-pass') {
+                event.target.placeholder = 'Введите пароль';
+            } else if (event.target.name === 'reset-pass2') {
+                event.target.placeholder = 'Введите пароль еще раз';
+            }
+        }
+    };
+
     return (
-        <section className="auth-section">
+        <section className="reset-section">
             <SguSvg />
-            <p className="auth-head-text">Сброс пароля</p>
-            <p className="auth-info-text">
-                Чтобы войти в систему, укажите новый пароль.
+            <p className="reset-head-text">Сброс пароля</p>
+            <p className="reset-info-text">
+                Чтобы войти в систему, укажите новый пароль
             </p>
-            <form className="auth-style" action="#" method="post">
-                <div className="auth-input">
+            <form className="reset-form" action="#" method="post">
+                <label className='reset-text-label'>Новый пароль</label>
                     <input
-                        className="input-text"
+                        className="reset-input"
                         type="password"
-                        name="auth-pass"
-                        placeholder=" "
+                        name="reset-pass"
+                        placeholder="Введите пароль"
                         required
-                        // onChange={handleInputChange}
-                    />
-                    <label>Новый пароль</label>
-                </div>
-                <div className="auth-input">
+                        value={password1}
+                        onChange={handleInputChange}
+                        onFocus={handleInputFocus}
+                        onBlur={handleInputBlur}
+                />
+                <label className='reset-text-label'>Повторите пароль</label>
                     <input
-                        className="input-text"
-                        type="password"
-                        name="auth-pass"
-                        placeholder=" "
-                        required
-                        // onChange={handleInputChange}
-                    />
-                    <label>Введите новый пароль еще раз</label>
-                </div>
+                    className="reset-input"
+                    type="password"
+                    name="reset-pass"
+                    placeholder="Введите пароль еще раз"
+                    required
+                    value={password2}
+                    onChange={handleInputChange}
+                    onFocus={handleInputFocus}
+                    onBlur={handleInputBlur}
+                 />
             </form>
-            <div className="auth-submit">
+            <div className="reset-submit">
                 <button
-                    className="auth-submit-button"
+                    className="reset-submit-button"
                     type="submit"
-                    name="auth-submit"
-                    // onClick={handleLogin}
+                    name="reset-submit"
                 >
                     Сохранить
                 </button>
             </div>
-            <NavLink to="/auth" className="forgot-back-text">
+            <NavLink to="/auth" className="reset-back-text">
                 На страницу входа
             </NavLink>
         </section>
