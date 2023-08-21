@@ -23,18 +23,16 @@ export const BurgerMenuAdmin: React.FC = () => {
             {isOpen && (
                 <div className="block-menu">
                     <div className="menu-items">
-                        <NavLink to="/attendance/groups">Группы</NavLink>
+                        <NavLink to="/deanery/groups">Группы</NavLink>
                     </div>
                     <div className="menu-items">
-                        <NavLink to="/attendance/subgroups">Подгруппы</NavLink>
+                        <NavLink to="/deanery/subgroups">Подгруппы</NavLink>
                     </div>
                     <div className="menu-items">
-                        <NavLink to="/attendance/teachers">
-                            Преподаватели
-                        </NavLink>
+                        <NavLink to="/deanery/teachers">Преподаватели</NavLink>
                     </div>
                     <div className="menu-items">
-                        <NavLink to="/attendance/students">Студенты</NavLink>
+                        <NavLink to="/deanery/students">Студенты</NavLink>
                     </div>
                     <div className="menu-items">
                         <NavLink to="/auth">Выйти</NavLink>
