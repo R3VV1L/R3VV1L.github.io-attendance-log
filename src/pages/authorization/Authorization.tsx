@@ -13,10 +13,10 @@ export const Authorization: React.FC = () => {
     const [user, setUser] = useState<User>({ username: '', password: '' });
     // @ts-ignore
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
     // @ts-ignore
-    const [isAdmin, setIsAdmin] = useState(false);
+    const [isAdmin, setIsAdmin] = useState<boolean>(false);
     const navigate = useNavigate();
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,9 +35,8 @@ export const Authorization: React.FC = () => {
             setIsAdmin(true);
             navigate('/deanery');
             console.log('admin');
-        }
-        if (email === 'student@mail.ru' && password === 'password') {
-            setIsAdmin(true);
+        } else if (email === 'student@mail.ru' && password === 'password') {
+            setIsAdmin(false);
             navigate('/attendance');
             console.log('student');
         } else {
