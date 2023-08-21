@@ -9,6 +9,7 @@ export const Attendance = () => {
             <div className="students-title">
                 <p>Посещаемость</p>
             </div>
+            <Attendance-table />
             <ButtonTable />
         </div>
     );
