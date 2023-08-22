@@ -1,11 +1,8 @@
 // @ts-ignore
 import React from 'react';
-<<<<<<< Updated upstream
-=======
 import { Header } from '../../components/header/Header.tsx';
 import { Outlet } from 'react-router-dom';
 import { AttendanceTable } from '../../components/tables/attendance-table/AttendanceTable';
->>>>>>> Stashed changes
 import { ButtonTable } from '../../components/tables/button-table/ButtonTable';
 import './Attendance.css';
 
@@ -899,14 +896,12 @@ export const Attendance = () => {
 
     return (
         <div>
+            <Header />
+            <Outlet />
             <div className="students-title">
                 <p>Посещаемость</p>
             </div>
-<<<<<<< Updated upstream
-            <Attendance-table />
-=======
             <AttendanceTable data={data} user="attendance" />
->>>>>>> Stashed changes
             <ButtonTable />
         </div>
     );

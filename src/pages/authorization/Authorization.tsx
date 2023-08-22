@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SguSvg } from '../../assets/SguSvg.tsx';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './Authorization.css';
 
 type User = {
@@ -11,9 +11,13 @@ type User = {
 export const Authorization: React.FC = () => {
     // @ts-ignore
     const [user, setUser] = useState<User>({ username: '', password: '' });
+    // @ts-ignore
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
+    // @ts-ignore
+    const [isAdmin, setIsAdmin] = useState<boolean>(false);
+    const navigate = useNavigate();
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -28,7 +32,13 @@ export const Authorization: React.FC = () => {
     const handleLogin = () => {
         // Проверяем, что пользователь ввел правильные учетные данные
         if (email === 'admin@mail.ru' && password === 'password') {
-            setIsLoggedIn(true);
+            setIsAdmin(true);
+            navigate('/deanery');
+            console.log('admin');
+        } else if (email === 'student@mail.ru' && password === 'password') {
+            setIsAdmin(false);
+            navigate('/attendance');
+            console.log('student');
         } else {
             console.log('Неправильное имя пользователя или пароль', isLoggedIn);
         }
@@ -84,20 +94,14 @@ export const Authorization: React.FC = () => {
                 />
             </form>
             <div className="auth-submit">
-                <Link to="/attendance">
-                    <button
-                        className="auth-submit-button"
-                        type="submit"
-                        name="auth-submit"
-                        onClick={() => {
-                            if (isLoggedIn) {
-                                handleLogin();
-                            }
-                        }}
-                    >
-                        Войти
-                    </button>
-                </Link>
+                <button
+                    className="auth-submit-button"
+                    type="submit"
+                    name="auth-submit"
+                    onClick={handleLogin}
+                >
+                    Войти
+                </button>
             </div>
             <NavLink to="/pass-recovery" className="auth-forgot-text">
                 Забыли логин или пароль?
