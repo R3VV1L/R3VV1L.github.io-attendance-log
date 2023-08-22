@@ -17,6 +17,7 @@ export const Authorization: React.FC = () => {
     const [password, setPassword] = useState<string>('');
     // @ts-ignore
     const [isAdmin, setIsAdmin] = useState<boolean>(false);
+    const [isError, setIsError] = useState<boolean>(false); // новое состояние для отображения сообщения об ошибке
     const navigate = useNavigate();
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,7 +41,8 @@ export const Authorization: React.FC = () => {
             navigate('/attendance');
             console.log('student');
         } else {
-            console.log('Неправильное имя пользователя или пароль', isLoggedIn);
+            setIsError(true); // устанавливаем значение isError в true, если данные неверны
+            console.log('Неправильный логин или пароль', isLoggedIn);
         }
     };
 
@@ -91,7 +93,17 @@ export const Authorization: React.FC = () => {
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}
+                    onKeyPress={(event) => {
+                        if (event.key === 'Enter') {
+                            handleLogin();
+                        }
+                    }}
                 />
+                {isError && ( // условие для отображения сообщения об ошибке
+                    <p className="auth-error-text">
+                        Неправильный логин или пароль
+                    </p>
+                )}
             </form>
             <div className="auth-submit">
                 <button
