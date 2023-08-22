@@ -1,25 +1,32 @@
-table {
-    border-collapse: collapse;
-    font-size: 12px;
+.wrapper-table {
+    padding: 0 250px;
 }
 
-th {
-    width: 50%;
+.component-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    table-layout: fixed;
+}
+
+.table-th {
+    width: 100%;
     height: 28px;
     padding: 8px 20px;
     background: #1279be;
     color: #fff;
 }
 
-th:first-child {
+.table-th:first-child {
+    width: 20px;
     border-radius: 8px 0 0 0;
 }
 
-th:last-child {
+.table-th:last-child {
     border-radius: 0 8px 0 0;
 }
 
-td {
+.table-td {
     min-height: 28px;
     padding: 8px 20px;
     text-align: left;
@@ -28,15 +35,11 @@ td {
     border-right: 1px solid #1279be2e;
 }
 
-td:first-child {
+.table-td:first-child {
     border-bottom: none;
 }
 
-td:last-child {
+.table-td:last-child {
     border-right: none;
     border-radius: 0 0 8px 0;
-}
-
-.teacher-table {
-    padding: 0 250px;
 }

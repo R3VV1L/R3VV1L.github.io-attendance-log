@@ -1,4 +1,4 @@
-import { Table } from '../../components/tables/Table.tsx';
+import { Table } from '../../components/tables/table/Table.tsx';
 import './Teachers.css';
 import { ModalGroup } from '../../components/modal-group/ModalGroup.tsx';
 import { ButtonTable } from '../../components/tables/button-table/ButtonTable.tsx';
