@@ -14,6 +14,9 @@ export const ButtonTable = () => {
                 <button className="btn-arl">
                     <ArrowLeft />
                 </button>
+                <div className="button-table-text">
+                    {tableLength} из {tableLength}
+                </div>
                 <button
                     className="btn-arr"
                     onClick={() => {
@@ -22,9 +25,6 @@ export const ButtonTable = () => {
                 >
                     <ArrowRight />
                 </button>
-                <div className="button-table-text">
-                    {tableLength} из {tableLength}
-                </div>
             </div>
         </div>
     );
