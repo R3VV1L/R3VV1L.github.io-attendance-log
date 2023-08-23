@@ -73,3 +73,7 @@
     text-decoration: none;
     color: #1279be;
 }
+
+.auth-error-text {
+    color: red;
+}

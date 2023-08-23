@@ -3,7 +3,6 @@ import React from 'react';
 import { Header } from '../../components/header/Header.tsx';
 import { Outlet } from 'react-router-dom';
 import { AttendanceTable } from '../../components/tables/attendance-table/AttendanceTable';
-import { ButtonTable } from '../../components/tables/button-table/ButtonTable';
 import './Attendance.css';
 
 export const Attendance = () => {
@@ -902,7 +901,6 @@ export const Attendance = () => {
                 <p>Посещаемость</p>
             </div>
             <AttendanceTable data={data} user="attendance" />
-            <ButtonTable />
         </div>
     );
 };
