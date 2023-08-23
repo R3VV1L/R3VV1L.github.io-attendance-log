@@ -44,3 +44,14 @@
     clear: both;
     display: table;
 }
+
+@media screen and (max-width: 439px) {
+    .search-box-text {
+        width: 100%;
+        padding: 10px 20px;
+    }
+    .search-bottom {
+        left: auto;
+        right: 0;
+    }
+}

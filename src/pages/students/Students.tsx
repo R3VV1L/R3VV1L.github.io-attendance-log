@@ -153,7 +153,7 @@ export const Students = () => {
     return (
         <div>
             <div className="students-title">
-                <p>Студент</p>
+                <p>Студенты</p>
             </div>
             <ModalGroup />
             <Table data={data} user="student" />

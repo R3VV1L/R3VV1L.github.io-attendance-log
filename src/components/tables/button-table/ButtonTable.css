@@ -4,7 +4,9 @@
     padding: 20px 250px;
     margin: 0;
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    z-index: 1001;
+    position: sticky
 }
 
 .button-table-border {
@@ -21,7 +23,7 @@
     width: 80px;
     height: 22px;
     display: inline-block;
-    padding: 8px 0px;
+    padding: 8px 0;
     color: #1279be;
     text-align: center;
     font: 400 16px 'Outfit', sans-serif;
