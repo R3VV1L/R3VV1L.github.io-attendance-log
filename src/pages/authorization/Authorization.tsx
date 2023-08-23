@@ -37,7 +37,7 @@ export const Authorization: React.FC = () => {
         // Проверяем, что пользователь ввел правильные учетные данные
         if (email === 'admin@mail.ru' && password === 'password') {
             dispatch(setAdminStatus(true));
-            navigate('/deanery');
+            navigate('/deanery/admin');
             console.log('admin');
         } else if (email === 'student@mail.ru' && password === 'password') {
             dispatch(setAdminStatus(false));
