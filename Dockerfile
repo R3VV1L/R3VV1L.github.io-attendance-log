@@ -1,25 +1,11 @@
-# Используем базовый образ Node версии 18
-FROM node:18
-
-# Устанавливаем рабочую директорию внутри контейнера
+FROM node:16-alpine as build
 WORKDIR /app
+COPY package.json /app/package.json
+RUN npm install --only=prod
+COPY . /app
+RUN npm run build
 
-# Копируем package.json и package-lock.json внутрь контейнера
-COPY package.json .
-COPY package-lock.json .
-
-# Устанавливаем зависимости
-RUN npm i --legacy-peer-deps
-
-# Копируем все остальные файлы проекта внутрь контейнера
-COPY . .
-
-# Устанавливаем порт для приложения
-EXPOSE 5173
-
-# Задаем entrypoint
-ENTRYPOINT ["npm", "run"]
-
-# Запускаем сборку и запуск приложения
-CMD ["build"]
-CMD ["dev"]
+FROM nginx:1.21.3-alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 5172
+CMD ["nginx", "-g", "daemon off;"]
