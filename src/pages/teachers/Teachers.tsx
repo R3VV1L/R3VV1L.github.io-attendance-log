@@ -1,7 +1,6 @@
 import { Table } from '../../components/tables/table/Table.tsx';
 import './Teachers.css';
 import { ModalGroup } from '../../components/modal-group/ModalGroup.tsx';
-import { ButtonTable } from '../../components/tables/button-table/ButtonTable.tsx';
 
 export const Teachers = () => {
     const data = [
@@ -125,6 +124,22 @@ export const Teachers = () => {
             login: 'sidorova_ai',
             password: 'sidorova789',
         },
+        {
+            name: 'Петров Петр Петрович',
+            position: 'Ассистент',
+            department: 'Физики',
+            email: 'petrov@university.edu',
+            login: 'petrov_pp',
+            password: 'petrov456',
+        },
+        {
+            name: 'Сидорова Анна Ивановна',
+            position: 'Старший преподаватель',
+            department: 'Информатики',
+            email: 'sidorova@university.edu',
+            login: 'sidorova_ai',
+            password: 'sidorova789',
+        },
     ]; // данные с бд, потом добавить фетч или аксиос
 
     return (
@@ -134,7 +149,6 @@ export const Teachers = () => {
             </div>
             <ModalGroup />
             <Table data={data} user="teacher" />
-            <ButtonTable />
         </div>
     );
 };

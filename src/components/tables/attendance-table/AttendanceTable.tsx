@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@reduxjs/toolkit/dist/query/core/apiState';
 import { setTableLength } from '../../../API/action.tsx';
 import { Search } from '../../search/Search.tsx';
+import { ButtonTable } from '../button-table/ButtonTable.tsx';
 
 interface TableProps {
     data: any;
@@ -14,7 +15,19 @@ export const AttendanceTable = ({ data, user }: TableProps) => {
     // @ts-ignore
     const [tableData, setTableData] = useState(data);
     console.log(user);
+
+    /////////////////////////// функции для отображения записей в кнопочках
     const [filteredData, setFilteredData] = useState(data);
+    // @ts-ignore
+    const [currentPage, setCurrentPage] = useState(1);
+    const recordsPerPage = 15;
+
+    const getPaginatedData = () => {
+        const startIndex = (currentPage - 1) * recordsPerPage;
+        const endIndex = startIndex + recordsPerPage;
+        return filteredData.slice(startIndex, endIndex);
+    };
+    ///////////////////////////
 
     useSelector((state: RootState<any, any, any>) => state.attendance);
     const tableLength = filteredData.length;
@@ -88,112 +101,121 @@ export const AttendanceTable = ({ data, user }: TableProps) => {
                 </thead>
                 {user === 'attendance' ? (
                     <tbody>
-                        {filteredData.map((attendance: any, index: number) => (
-                            <tr key={index}>
-                                <td className="attendance-table-td">
-                                    {index + 1}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.name}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day1}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day2}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day3}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day4}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day5}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day6}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day7}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day8}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day9}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day10}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day11}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day12}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day13}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day14}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day15}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day16}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day17}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day18}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day19}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day20}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day21}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day22}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day23}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day24}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day25}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day26}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day27}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day28}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day29}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day30}
-                                </td>
-                                <td className="attendance-table-td">
-                                    {attendance.day31}
-                                </td>
-                            </tr>
-                        ))}
+                        {getPaginatedData().map(
+                            (attendance: any, index: number) => (
+                                <tr key={index}>
+                                    <td className="attendance-table-td">
+                                        {index + 1}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.name}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day1}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day2}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day3}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day4}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day5}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day6}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day7}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day8}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day9}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day10}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day11}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day12}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day13}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day14}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day15}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day16}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day17}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day18}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day19}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day20}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day21}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day22}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day23}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day24}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day25}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day26}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day27}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day28}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day29}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day30}
+                                    </td>
+                                    <td className="attendance-table-td">
+                                        {attendance.day31}
+                                    </td>
+                                </tr>
+                            )
+                        )}
                     </tbody>
                 ) : null}
             </table>
+            <ButtonTable
+                currentPage={currentPage}
+                recordsPerPage={recordsPerPage}
+                filteredData={filteredData}
+                setCurrentPage={setCurrentPage}
+                getPaginatedData={getPaginatedData}
+            />
         </div>
     );
 };

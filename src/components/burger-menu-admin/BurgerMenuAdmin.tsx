@@ -35,6 +35,9 @@ export const BurgerMenuAdmin: React.FC = () => {
                         <NavLink to="/deanery/students">Студенты</NavLink>
                     </div>
                     <div className="menu-items">
+                        <NavLink to="/attendance">Посещаемость</NavLink>
+                    </div>
+                    <div className="menu-items">
                         <NavLink to="/auth">Выйти</NavLink>
                     </div>
                 </div>

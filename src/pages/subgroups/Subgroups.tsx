@@ -2,7 +2,6 @@
 import React from 'react';
 import { ModalGroup } from '../../components/modal-group/ModalGroup';
 import { Table } from '../../components/tables/table/Table';
-import { ButtonTable } from '../../components/tables/button-table/ButtonTable';
 import './Subgroups.css';
 
 export const Subgroups = () => {
@@ -59,7 +58,6 @@ export const Subgroups = () => {
             </div>
             <ModalGroup />
             <Table data={data} user="subgroup" />
-            <ButtonTable />
         </div>
     );
 };
