@@ -1,16 +1,37 @@
 import { useState } from 'react';
 import './ModalGroup.css';
 import { Button } from '../button/Button.tsx';
+import { AddModal } from '../modal-windows/add-modal.tsx/AddModal.tsx';
+import { EditModal } from '../modal-windows/edit-modal/EditModal.tsx';
+import { DeleteModal } from '../modal-windows/delete-modal/DeleteModal.tsx';
 
 export const ModalGroup = () => {
-    const [showModal, setShowModal] = useState(false);
+    const [showAddModal, setShowAddModal] = useState(false);
+    const [showEditModal, setShowEditModal] = useState(false);
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
 
-    const handleOpenModal = () => {
-        setShowModal(true);
+    const handleOpenAddModal = () => {
+        setShowAddModal(true);
     };
 
-    const handleCloseModal = () => {
-        setShowModal(false);
+    const handleCloseAddModal = () => {
+        setShowAddModal(false);
+    };
+
+    const handleOpenEditModal = () => {
+        setShowEditModal(true);
+    };
+
+    const handleCloseEditModal = () => {
+        setShowEditModal(false);
+    };
+
+    const handleOpenDeleteModal = () => {
+        setShowDeleteModal(true);
+    };
+
+    const handleCloseDeleteModal = () => {
+        setShowDeleteModal(false);
     };
 
     return (
@@ -18,91 +39,36 @@ export const ModalGroup = () => {
             <section className="modal-group-section">
                 <Button
                     title="Добавить"
-                    size="page-fill"
-                    onClick={handleOpenModal}
+                    size="fill"
+                    onClick={handleOpenAddModal}
                 />
                 <Button
                     title="Редактировать"
-                    size="page-empty"
-                    onClick={() => {}}
+                    size="empty"
+                    onClick={handleOpenEditModal}
                 />
-                <Button title="Удалить" size="page-empty" onClick={() => {}} />
+                <Button
+                    title="Удалить"
+                    size="empty"
+                    onClick={handleOpenDeleteModal}
+                />
             </section>
 
-            {showModal && (
+            {showAddModal && (
                 <div className="modal-group">
-                    <div className="modal-content">
-                        <div
-                            className="close-button"
-                            onClick={handleCloseModal}
-                        >
-                            <span className="close-icon" />
-                            <span className="close-icon" />
-                        </div>
-                        <div className="modal-title">
-                            Добавление преподавателя
-                        </div>
-                        <div className="modal-name">
-                            <label className="modal-subtitle">ФИО</label>
-                            <input
-                                className="input-name"
-                                placeholder="Не заполнено"
-                            />
-                        </div>
-                        <div className="modal-name">
-                            <label className="modal-subtitle">Должность</label>
-                            <select className="input-name">
-                                <option value="" disabled selected hidden>
-                                    Не выбрано
-                                </option>
-                                <option value="option1">Зав. кафедрой</option>
-                                <option value="option2">
-                                    Старший преподаватель
-                                </option>
-                                <option value="option3">
-                                    Старший преподаватель
-                                </option>
-                            </select>
-                        </div>
-                        <div className="modal-name">
-                            <label className="modal-subtitle">Кафедра</label>
-                            <select className="input-name">
-                                <option value="" disabled selected hidden>
-                                    Не выбрано
-                                </option>
-                                <option value="option4">ИТиМ</option>
-                                <option value="option5">ПиД</option>
-                                <option value="option6">СПФ</option>
-                            </select>
-                        </div>
-                        <div className="modal-name">
-                            <label className="modal-subtitle">Эл. адрес</label>
-                            <input
-                                className="input-name"
-                                placeholder="Не заполнено"
-                            />
-                        </div>
-                        <div className="modal-name">
-                            <label className="modal-subtitle">Логин</label>
-                            <input
-                                className="input-name"
-                                placeholder="Не заполнено"
-                            />
-                        </div>
-                        <div className="modal-name">
-                            <label className="modal-subtitle">Пароль</label>
-                            <input
-                                className="input-name"
-                                placeholder="Не заполнено"
-                            />
-                        </div>
+                    <AddModal onClose={handleCloseAddModal} />
+                </div>
+            )}
 
-                        <Button
-                            title="Добавить"
-                            size="modal"
-                            onClick={handleCloseModal}
-                        />
-                    </div>
+            {showEditModal && (
+                <div className="modal-group">
+                    <EditModal onClose={handleCloseEditModal} />
+                </div>
+            )}
+
+            {showDeleteModal && (
+                <div className="modal-group">
+                    <DeleteModal onClose={handleCloseDeleteModal} />
                 </div>
             )}
         </>

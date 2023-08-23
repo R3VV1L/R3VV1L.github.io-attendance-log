@@ -1,0 +1,61 @@
+.add-modal-content {
+    background-color: #f5f5f7;
+    padding: 50px 100px;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+}
+
+.add-modal-title {
+    padding: 0 0 30px 0;
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+}
+
+.add-modal-name {
+    display: flex;
+    padding: 0 0 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font: 16px 300 'Outfit', sans-serif;
+}
+
+.add-modal-subtitle {
+    display: inline-block;
+    padding: 0 20px 0 0;
+    color: #333;
+}
+
+.input-name {
+    width: 415px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 8px;
+    border: none;
+    padding: 0 20px;
+    height: 48px;
+    font: 400 16px 'Outfit', sans-serif;
+}
+
+.input-name::placeholder {
+    color: #999999;
+}
+
+.input-name select {
+    appearance: none;
+    background-image: url('path/to/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+}
+
+.option-value-color {
+    display: inline;
+}
+
+.cancel-button {
+    display: inline;
+}

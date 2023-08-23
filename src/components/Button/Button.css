@@ -2,46 +2,32 @@ button {
     cursor: pointer;
 }
 
-.button-page-fill {
-    box-sizing: border-box;
-    color: #ffffff;
-    text-align: left;
-    font: 500 16px/16px 'Outfit', sans-serif;
-    position: relative;
-    display: flex;
-    align-items: center;
-    background: #1279be;
-    border: none;
-    border-radius: 24px;
-    padding: 10px;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
-    width: 270px;
+.button-fill {
+    width: 200px;
     height: 48px;
+    color: #ffffff;
+    text-align: center;
+    font: 600 16px 'Outfit', sans-serif;
+    background: #1279be;
+    border-width: 1px;
+    border-color: #1279be;
+    border-style: solid;
+    border-radius: 24px;
 }
 
-.button-page-empty {
-    box-sizing: border-box;
+.button-empty {
+    width: 200px;
+    height: 48px;
     border-radius: 24px;
     border-style: solid;
     border-color: #1279be;
     border-width: 1px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    width: 270px;
-    height: 48px;
-    position: relative;
     color: #1279be;
-    text-align: left;
-    font: 500 16px/16px 'Outfit', sans-serif;
+    text-align: center;
+    font: 600 16px 'Outfit', sans-serif;
 }
 
-.button-modal {
+.button-big {
     margin: 0;
     box-sizing: border-box;
     background: #1279be;
