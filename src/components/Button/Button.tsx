@@ -3,7 +3,7 @@ import './Button.css';
 
 interface ButtonProps {
     title: string;
-    size: 'page-fill' | 'page-empty' | 'modal';
+    size: 'fill' | 'empty' | 'big';
     onClick: () => void;
 }
 

@@ -45,7 +45,6 @@ export const AttendanceTable = ({ data, user }: TableProps) => {
 
     return (
         <div className="wrapper-attendance-table">
-            {/* <Search onSearch={handleSearch} /> */}
             <table className="component-attendance-table">
                 <thead>
                     <tr>
