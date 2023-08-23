@@ -4,7 +4,7 @@ const initialState = {
     tableLength: 0,
 };
 
-const rootReducer = (state = initialState, action: any) => {
+const reducer = (state = initialState, action: any) => {
     switch (action.type) {
         case SET_TABLE_LENGTH:
             return {
@@ -16,4 +16,4 @@ const rootReducer = (state = initialState, action: any) => {
     }
 };
 
-export default rootReducer;
+export default reducer;

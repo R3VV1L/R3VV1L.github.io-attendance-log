@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './Table.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@reduxjs/toolkit/dist/query/core/apiState';
-import { setTableLength } from '../../../API/action.tsx';
+import { setTableLength } from '../../../API/table/action.tsx';
 import { Search } from '../../search/Search.tsx';
 import { ButtonTable } from '../button-table/ButtonTable.tsx';
 
