@@ -16,6 +16,7 @@ export const AttendanceTable = ({ data, user }: TableProps) => {
     console.log(user);
 
     /////////////////////////// функции для отображения записей в кнопочках
+    // @ts-ignore
     const [filteredData, setFilteredData] = useState(data);
     // @ts-ignore
     const [currentPage, setCurrentPage] = useState(1);
@@ -35,12 +36,12 @@ export const AttendanceTable = ({ data, user }: TableProps) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        const sorted = [...filteredData].sort((a, b) =>
+        const sorted = [...tableData].sort((a, b) =>
             a.name.localeCompare(b.name)
         );
-        setFilteredData(sorted);
+        setTableData(sorted);
         dispatch(setTableLength(filteredData.length));
-    }, [dispatch, tableLength, filteredData]);
+    }, [dispatch]);
 
     return (
         <div className="wrapper-attendance-table">
