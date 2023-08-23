@@ -3,7 +3,6 @@ import './AttendanceTable.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@reduxjs/toolkit/dist/query/core/apiState';
 import { setTableLength } from '../../../API/table/action.tsx';
-import { Search } from '../../search/Search.tsx';
 import { ButtonTable } from '../button-table/ButtonTable.tsx';
 
 interface TableProps {
@@ -43,18 +42,9 @@ export const AttendanceTable = ({ data, user }: TableProps) => {
         dispatch(setTableLength(filteredData.length));
     }, [dispatch, tableLength, filteredData]);
 
-    const handleSearch = (query: string) => {
-        const filtered = tableData.filter((item: any) =>
-            Object.values(item).some((value: any) =>
-                value.toString().toLowerCase().includes(query.toLowerCase())
-            )
-        );
-        setFilteredData(filtered);
-    };
-
     return (
         <div className="wrapper-attendance-table">
-            <Search onSearch={handleSearch} />
+            {/* <Search onSearch={handleSearch} /> */}
             <table className="component-attendance-table">
                 <thead>
                     <tr>
