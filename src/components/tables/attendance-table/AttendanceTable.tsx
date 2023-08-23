@@ -17,6 +17,7 @@ export const AttendanceTable = ({ data, user }: TableProps) => {
     console.log(user);
 
     /////////////////////////// функции для отображения записей в кнопочках
+    // @ts-ignore
     const [filteredData, setFilteredData] = useState(data);
     // @ts-ignore
     const [currentPage, setCurrentPage] = useState(1);
