@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './ModalGroup.css';
-import { Button } from '../Button/Button.tsx';
+import { Button } from '../button/Button.tsx';
 
 export const ModalGroup = () => {
     const [showModal, setShowModal] = useState(false);
