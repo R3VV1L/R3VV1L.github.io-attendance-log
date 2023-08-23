@@ -36,12 +36,12 @@ export const AttendanceTable = ({ data, user }: TableProps) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        const sorted = [...filteredData].sort((a, b) =>
+        const sorted = [...tableData].sort((a, b) =>
             a.name.localeCompare(b.name)
         );
-        setFilteredData(sorted);
+        setTableData(sorted);
         dispatch(setTableLength(filteredData.length));
-    }, [dispatch, tableLength, filteredData]);
+    }, [dispatch]);
 
     const handleSearch = (query: string) => {
         const filtered = tableData.filter((item: any) =>
