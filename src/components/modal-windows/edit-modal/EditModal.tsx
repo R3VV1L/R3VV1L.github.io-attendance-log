@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import './EditModal.css';
-import { Button } from '../../button/Button';
-
+import { Button } from '../../Button/Button';
+// @ts-ignore
 export const EditModal = ({ onClose }) => {
+    // @ts-ignore
     const [showModal, setShowModal] = useState(false);
-
+    // @ts-ignore
     const handleOpenModal = () => {
         setShowModal(true);
     };
