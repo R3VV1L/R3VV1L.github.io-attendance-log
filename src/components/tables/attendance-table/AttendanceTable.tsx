@@ -47,7 +47,7 @@ export const AttendanceTable = ({ data, user }: TableProps) => {
         <div className="wrapper-attendance-table">
             <table className="component-attendance-table">
                 <thead>
-                    <tr>
+                    <tr className="attendance-table-trh">
                         {user === 'attendance' ? (
                             <>
                                 <th className="attendance-table-th">№</th>
@@ -93,7 +93,10 @@ export const AttendanceTable = ({ data, user }: TableProps) => {
                     <tbody>
                         {getPaginatedData().map(
                             (attendance: any, index: number) => (
-                                <tr key={index}>
+                                <tr
+                                    className="attendance-table-trb"
+                                    key={index}
+                                >
                                     <td className="attendance-table-td">
                                         {index + 1}
                                     </td>

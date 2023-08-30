@@ -3,12 +3,13 @@ import React from 'react';
 import { Header } from '../../components/header/Header.tsx';
 import { Outlet } from 'react-router-dom';
 import { AttendanceTable } from '../../components/tables/attendance-table/AttendanceTable';
+import { Footer } from '../../components/footer/Footer.tsx';
 import './Attendance.css';
 
 export const Attendance = () => {
     const data = [
         {
-            name: 'Веретнов Александр Вадимович',
+            name: 'Веретнов Александр Вадимович77777777777777',
             day1: 'н',
             day2: 'н',
             day3: '',
@@ -821,7 +822,7 @@ export const Attendance = () => {
             day30: 'н',
         },
         {
-            name: 'Иванов Игорь Александрович',
+            name: 'Иванов Игорь Александрови',
             day1: 'н',
             day2: 'н',
             day3: '',
@@ -894,13 +895,14 @@ export const Attendance = () => {
     ]; // данные с бд, потом добавить фетч или аксиос
 
     return (
-        <div>
+        <div className="attendance-wrapper">
             <Header />
             <Outlet />
             <div className="students-title">
                 <p>Посещаемость</p>
             </div>
             <AttendanceTable data={data} user="attendance" />
+            <Footer />
         </div>
     );
 };

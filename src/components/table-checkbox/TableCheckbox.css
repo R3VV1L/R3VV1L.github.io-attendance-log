@@ -1,0 +1,18 @@
+input[type='checkbox'] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+input[type='checkbox']:checked {
+    background-color: #0071e3;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23ffffff" d="M5.5 11.5l-3-3 1.414-1.414L5.5 8.672l6.793-6.793L13.5 3.5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -1,0 +1,32 @@
+.footer-wrapper {
+    width: 75%;
+    height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-top: solid 1px #d2d2d7;
+}
+
+.footer-link {
+    color: #424245;
+    text-decoration: none;
+}
+
+.footer-link:first-child {
+    border-right: 1px solid #424245;
+    padding: 0 10px 0 0;
+}
+
+.footer-link:last-child {
+    padding: 0 0 0 10px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #424245;
+}
+
+.footer-copyright {
+    color: #6e6e73;
+}
