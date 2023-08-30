@@ -67,7 +67,7 @@ export const Table = ({ data, user }: TableProps) => {
                                         title={'Выбрать всё'}
                                         checked={false}
                                         onChange={function (
-                                            checked: boolean
+                                            _checked: boolean
                                         ): void {
                                             throw new Error(
                                                 'Function not implemented.'
@@ -90,7 +90,7 @@ export const Table = ({ data, user }: TableProps) => {
                                         title={'Выбрать всё'}
                                         checked={false}
                                         onChange={function (
-                                            checked: boolean
+                                            _checked: boolean
                                         ): void {
                                             throw new Error(
                                                 'Function not implemented.'
@@ -110,7 +110,7 @@ export const Table = ({ data, user }: TableProps) => {
                                         title={'Выбрать всё'}
                                         checked={false}
                                         onChange={function (
-                                            checked: boolean
+                                            _checked: boolean
                                         ): void {
                                             throw new Error(
                                                 'Function not implemented.'
@@ -134,7 +134,7 @@ export const Table = ({ data, user }: TableProps) => {
                                         title={'Выбрать всё'}
                                         checked={false}
                                         onChange={function (
-                                            checked: boolean
+                                            _checked: boolean
                                         ): void {
                                             throw new Error(
                                                 'Function not implemented.'
@@ -161,7 +161,7 @@ export const Table = ({ data, user }: TableProps) => {
                                         title={'Выбрать'}
                                         checked={false}
                                         onChange={function (
-                                            checked: boolean
+                                            _checked: boolean
                                         ): void {
                                             throw new Error(
                                                 'Function not implemented.'
@@ -189,7 +189,7 @@ export const Table = ({ data, user }: TableProps) => {
                                             title={'Выбрать'}
                                             checked={false}
                                             onChange={function (
-                                                checked: boolean
+                                                _checked: boolean
                                             ): void {
                                                 throw new Error(
                                                     'Function not implemented.'
@@ -219,7 +219,7 @@ export const Table = ({ data, user }: TableProps) => {
                                             title={'Выбрать'}
                                             checked={false}
                                             onChange={function (
-                                                checked: boolean
+                                                _checked: boolean
                                             ): void {
                                                 throw new Error(
                                                     'Function not implemented.'
@@ -259,7 +259,7 @@ export const Table = ({ data, user }: TableProps) => {
                                             title={'Выбрать'}
                                             checked={false}
                                             onChange={function (
-                                                checked: boolean
+                                                _checked: boolean
                                             ): void {
                                                 throw new Error(
                                                     'Function not implemented.'
