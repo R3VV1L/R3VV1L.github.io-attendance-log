@@ -5,6 +5,7 @@ import { RootState } from '@reduxjs/toolkit/dist/query/core/apiState';
 import { setTableLength } from '../../../API/table/action.tsx';
 import { Search } from '../../search/Search.tsx';
 import { ButtonTable } from '../button-table/ButtonTable.tsx';
+import { TableCheckbox } from '../../table-checkbox/TableCheckbox.tsx';
 
 interface TableProps {
     data: any;
@@ -57,10 +58,23 @@ export const Table = ({ data, user }: TableProps) => {
             <Search onSearch={handleSearch} />
             <table className="component-table">
                 <thead>
-                    <tr>
+                    <tr className="table-trh">
                         {user === 'group' ? (
                             <>
-                                <th className="table-th">№</th>
+                                <th className="table-th table-checkbox-cell">
+                                    <TableCheckbox
+                                        label={''}
+                                        title={'Выбрать всё'}
+                                        checked={false}
+                                        onChange={function (
+                                            checked: boolean
+                                        ): void {
+                                            throw new Error(
+                                                'Function not implemented.'
+                                            );
+                                        }}
+                                    />
+                                </th>
                                 <th className="table-th">Наименование</th>
                                 <th className="table-th">Профиль</th>
                                 <th className="table-th">Эл. адрес</th>
@@ -70,14 +84,40 @@ export const Table = ({ data, user }: TableProps) => {
                         ) : null}
                         {user === 'subgroup' ? (
                             <>
-                                <th className="table-th">№</th>
+                                <th className="table-th table-checkbox-cell">
+                                    <TableCheckbox
+                                        label={''}
+                                        title={'Выбрать всё'}
+                                        checked={false}
+                                        onChange={function (
+                                            checked: boolean
+                                        ): void {
+                                            throw new Error(
+                                                'Function not implemented.'
+                                            );
+                                        }}
+                                    />
+                                </th>
                                 <th className="table-th">Наименование</th>
                                 <th className="table-th">Комментарий</th>
                             </>
                         ) : null}
                         {user === 'teacher' ? (
                             <>
-                                <th className="table-th">№</th>
+                                <th className="table-th table-checkbox-cell">
+                                    <TableCheckbox
+                                        label={''}
+                                        title={'Выбрать всё'}
+                                        checked={false}
+                                        onChange={function (
+                                            checked: boolean
+                                        ): void {
+                                            throw new Error(
+                                                'Function not implemented.'
+                                            );
+                                        }}
+                                    />
+                                </th>
                                 <th className="table-th">ФИО</th>
                                 <th className="table-th">Должность</th>
                                 <th className="table-th">Кафедра</th>
@@ -88,7 +128,20 @@ export const Table = ({ data, user }: TableProps) => {
                         ) : null}
                         {user === 'student' ? (
                             <>
-                                <th className="table-th">№</th>
+                                <th className="table-th table-checkbox-cell">
+                                    <TableCheckbox
+                                        label={''}
+                                        title={'Выбрать всё'}
+                                        checked={false}
+                                        onChange={function (
+                                            checked: boolean
+                                        ): void {
+                                            throw new Error(
+                                                'Function not implemented.'
+                                            );
+                                        }}
+                                    />
+                                </th>
                                 <th className="table-th">ФИО</th>
                                 <th className="table-th">Кафедра</th>
                                 <th className="table-th">Эл. адрес</th>
@@ -101,8 +154,21 @@ export const Table = ({ data, user }: TableProps) => {
                 {user === 'group' ? (
                     <tbody>
                         {getPaginatedData().map((group: any, index: number) => (
-                            <tr key={index}>
-                                <td className="table-td">{index + 1}</td>
+                            <tr className="table-trb" key={index}>
+                                <td className="table-td table-checkbox-cell">
+                                    <TableCheckbox
+                                        label={''}
+                                        title={'Выбрать'}
+                                        checked={false}
+                                        onChange={function (
+                                            checked: boolean
+                                        ): void {
+                                            throw new Error(
+                                                'Function not implemented.'
+                                            );
+                                        }}
+                                    />
+                                </td>
                                 <td className="table-td">{group.name}</td>
                                 <td className="table-td">{group.profile}</td>
                                 <td className="table-td">{group.email}</td>
@@ -116,8 +182,21 @@ export const Table = ({ data, user }: TableProps) => {
                     <tbody>
                         {getPaginatedData().map(
                             (subgroup: any, index: number) => (
-                                <tr key={index}>
-                                    <td className="table-td">{index + 1}</td>
+                                <tr className="table-trb" key={index}>
+                                    <td className="table-td table-checkbox-cell">
+                                        <TableCheckbox
+                                            label={''}
+                                            title={'Выбрать'}
+                                            checked={false}
+                                            onChange={function (
+                                                checked: boolean
+                                            ): void {
+                                                throw new Error(
+                                                    'Function not implemented.'
+                                                );
+                                            }}
+                                        />
+                                    </td>
                                     <td className="table-td">
                                         {subgroup.name}
                                     </td>
@@ -133,8 +212,21 @@ export const Table = ({ data, user }: TableProps) => {
                     <tbody>
                         {getPaginatedData().map(
                             (teacher: any, index: number) => (
-                                <tr key={index}>
-                                    <td className="table-td">{index + 1}</td>
+                                <tr className="table-trb" key={index}>
+                                    <td className="table-td table-checkbox-cell">
+                                        <TableCheckbox
+                                            label={''}
+                                            title={'Выбрать'}
+                                            checked={false}
+                                            onChange={function (
+                                                checked: boolean
+                                            ): void {
+                                                throw new Error(
+                                                    'Function not implemented.'
+                                                );
+                                            }}
+                                        />
+                                    </td>
                                     <td className="table-td">{teacher.name}</td>
                                     <td className="table-td">
                                         {teacher.position}
@@ -160,8 +252,21 @@ export const Table = ({ data, user }: TableProps) => {
                     <tbody>
                         {getPaginatedData().map(
                             (student: any, index: number) => (
-                                <tr key={index}>
-                                    <td className="table-td">{index + 1}</td>
+                                <tr className="table-trb" key={index}>
+                                    <td className="table-td table-checkbox-cell">
+                                        <TableCheckbox
+                                            label={''}
+                                            title={'Выбрать'}
+                                            checked={false}
+                                            onChange={function (
+                                                checked: boolean
+                                            ): void {
+                                                throw new Error(
+                                                    'Function not implemented.'
+                                                );
+                                            }}
+                                        />
+                                    </td>
                                     <td className="table-td">{student.name}</td>
                                     <td className="table-td">
                                         {student.department}
