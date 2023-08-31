@@ -43,7 +43,7 @@ export const Table = ({ data, user }: TableProps) => {
         );
         setFilteredData(sorted);
         dispatch(setTableLength(sorted.length));
-    }, [dispatch, filteredData]);
+    }, [dispatch]);
 
     const handleSearch = (query: string) => {
         const filtered = tableData.filter((item: any) =>
