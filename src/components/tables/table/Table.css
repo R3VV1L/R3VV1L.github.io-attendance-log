@@ -3,11 +3,16 @@
     margin: 0 auto;
 }
 
+.table-controls {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .component-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 12px;
-    table-layout: fixed;
     background-color: #fff;
     border-radius: 8px;
     table-layout: auto;
@@ -18,15 +23,6 @@
     padding: 8px 20px;
     text-align: left;
     color: #000;
-    border-bottom: 1px solid #d2d2d7;
-}
-
-.table-th:first-child {
-    border-radius: 8px 0 0 0;
-}
-
-.table-th:last-child {
-    border-radius: 0 8px 0 0;
 }
 
 .table-td {
@@ -46,5 +42,6 @@
 
 .table-checkbox-cell {
     width: 16px;
+    height: 16px;
     padding: 0 20px;
 }

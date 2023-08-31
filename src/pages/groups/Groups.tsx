@@ -1,4 +1,3 @@
-import { ModalGroup } from '../../components/modal-group/ModalGroup';
 import { Table } from '../../components/tables/table/Table';
 import './Groups.css';
 
@@ -83,7 +82,6 @@ export const Groups = () => {
             <div className="groups-title">
                 <p>Группы</p>
             </div>
-            <ModalGroup />
             <Table data={data} user="group" />
         </div>
     );

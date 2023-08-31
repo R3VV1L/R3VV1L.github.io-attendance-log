@@ -36,22 +36,28 @@ export const ModalGroup = () => {
 
     return (
         <>
-            <section className="modal-group-section">
-                <Button
-                    title="Добавить"
-                    size="fill"
-                    onClick={handleOpenAddModal}
-                />
-                <Button
-                    title="Редактировать"
-                    size="empty"
-                    onClick={handleOpenEditModal}
-                />
-                <Button
-                    title="Удалить"
-                    size="empty"
-                    onClick={handleOpenDeleteModal}
-                />
+            <section>
+                <div className="modal-button">
+                    <Button
+                        title="+ Добавить"
+                        size="fill"
+                        onClick={handleOpenAddModal}
+                    />
+                </div>
+                <div className="modal-button">
+                    <Button
+                        title="Редактировать"
+                        size="empty"
+                        onClick={handleOpenEditModal}
+                    />
+                </div>
+                <div className="modal-button">
+                    <Button
+                        title="Удалить"
+                        size="empty"
+                        onClick={handleOpenDeleteModal}
+                    />
+                </div>
             </section>
 
             {showAddModal && (
