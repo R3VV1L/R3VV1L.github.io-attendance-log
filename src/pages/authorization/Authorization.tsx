@@ -67,49 +67,51 @@ export const Authorization: React.FC = () => {
 
     return (
         <>
-            <section className="auth-section">
-                <SguSvg />
-                <p className="auth-head-text">Вход в личный кабинет</p>
-                <p className="auth-info-text">
-                    Введите данные вашей учетной записи
-                </p>
-                <form className="auth-form" action="#" method="post">
-                    <label className="auth-text-label">Логин</label>
-                    <input
-                        className="auth-input"
-                        type="email"
-                        name="auth-email"
-                        placeholder="Введите Логин"
-                        required
-                        value={email}
-                        onChange={handleInputChange}
-                        onFocus={handleInputFocus}
-                        onBlur={handleInputBlur}
-                    />
-                    <label className="auth-text-label">Пароль</label>
-                    <input
-                        className="auth-input"
-                        type="password"
-                        name="auth-pass"
-                        placeholder="Введите Пароль"
-                        required
-                        value={password}
-                        onChange={handleInputChange}
-                        onFocus={handleInputFocus}
-                        onBlur={handleInputBlur}
-                        onKeyPress={(event) => {
-                            if (event.key === 'Enter') {
-                                handleLogin();
-                            }
-                        }}
-                    />
-                    {isError && ( // условие для отображения сообщения об ошибке
-                        <p className="auth-error-text">
-                            Неправильный логин или пароль
-                        </p>
-                    )}
-                </form>
-                <div className="auth-submit">
+            <div className="auth-wrapper">
+                <section className="auth-logo-section">
+                    <SguSvg />
+                </section>
+                <section className="auth-section">
+                    <h1 className="auth-title">Вход в личный кабинет</h1>
+                    <h2 className="auth-subtitle">
+                        Введите данные вашей учетной записи
+                    </h2>
+                    <form className="auth-form" action="#" method="post">
+                        <label className="auth-text-label">Логин</label>
+                        <input
+                            className="auth-input"
+                            type="email"
+                            name="auth-email"
+                            placeholder="Введите Логин"
+                            required
+                            value={email}
+                            onChange={handleInputChange}
+                            onFocus={handleInputFocus}
+                            onBlur={handleInputBlur}
+                        />
+                        <label className="auth-text-label">Пароль</label>
+                        <input
+                            className="auth-input"
+                            type="password"
+                            name="auth-pass"
+                            placeholder="Введите Пароль"
+                            required
+                            value={password}
+                            onChange={handleInputChange}
+                            onFocus={handleInputFocus}
+                            onBlur={handleInputBlur}
+                            onKeyPress={(event) => {
+                                if (event.key === 'Enter') {
+                                    handleLogin();
+                                }
+                            }}
+                        />
+                        {isError && ( // условие для отображения сообщения об ошибке
+                            <p className="auth-error-text">
+                                Неправильный логин или пароль
+                            </p>
+                        )}
+                    </form>
                     <button
                         className="auth-submit-button"
                         type="submit"
@@ -118,11 +120,11 @@ export const Authorization: React.FC = () => {
                     >
                         Войти
                     </button>
-                </div>
-                <NavLink to="/pass-recovery" className="auth-forgot-text">
-                    Забыли логин или пароль?
-                </NavLink>
-            </section>
+                    <NavLink to="/pass-recovery" className="auth-forgot-text">
+                        Забыли логин или пароль?
+                    </NavLink>
+                </section>
+            </div>
         </>
     );
 };

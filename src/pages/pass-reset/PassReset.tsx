@@ -33,50 +33,54 @@ export const PassReset: React.FC = () => {
     };
 
     return (
-        <section className="reset-section">
-            <SguSvg />
-            <p className="reset-head-text">Сброс пароля</p>
-            <p className="reset-info-text">
-                Чтобы войти в систему, укажите новый пароль
-            </p>
-            <form className="reset-form" action="#" method="post">
-                <label className="reset-text-label">Новый пароль</label>
-                <input
-                    className="reset-input"
-                    type="password"
-                    name="reset-pass"
-                    placeholder="Введите пароль"
-                    required
-                    value={password1}
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}
-                />
-                <label className="reset-text-label">Повторите пароль</label>
-                <input
-                    className="reset-input"
-                    type="password"
-                    name="reset-pass"
-                    placeholder="Введите пароль еще раз"
-                    required
-                    value={password2}
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}
-                />
-            </form>
-            <div className="reset-submit">
-                <button
-                    className="reset-submit-button"
-                    type="submit"
-                    name="reset-submit"
-                >
-                    Сохранить
-                </button>
-            </div>
-            <NavLink to="/auth" className="reset-back-text">
-                На страницу входа
-            </NavLink>
-        </section>
+        <div className="reset-wrapper">
+            <section className="reset-logo-section">
+                <SguSvg />
+            </section>
+            <section className="reset-section">
+                <h1 className="reset-title">Сброс пароля</h1>
+                <h2 className="reset-subtitle">
+                    Чтобы войти в систему, укажите новый пароль
+                </h2>
+                <form className="reset-form" action="#" method="post">
+                    <label className="reset-text-label">Новый пароль</label>
+                    <input
+                        className="reset-input"
+                        type="password"
+                        name="reset-pass"
+                        placeholder="Введите пароль"
+                        required
+                        value={password1}
+                        onChange={handleInputChange}
+                        onFocus={handleInputFocus}
+                        onBlur={handleInputBlur}
+                    />
+                    <label className="reset-text-label">Повторите пароль</label>
+                    <input
+                        className="reset-input"
+                        type="password"
+                        name="reset-pass"
+                        placeholder="Введите пароль еще раз"
+                        required
+                        value={password2}
+                        onChange={handleInputChange}
+                        onFocus={handleInputFocus}
+                        onBlur={handleInputBlur}
+                    />
+                </form>
+                <div className="reset-submit">
+                    <button
+                        className="reset-submit-button"
+                        type="submit"
+                        name="reset-submit"
+                    >
+                        Сохранить
+                    </button>
+                </div>
+                <NavLink to="/auth" className="reset-back-text">
+                    На страницу входа
+                </NavLink>
+            </section>
+        </div>
     );
 };

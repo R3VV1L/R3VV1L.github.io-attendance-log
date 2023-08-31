@@ -1,6 +1,5 @@
 // @ts-ignore
 import React from 'react';
-import { ModalGroup } from '../../components/modal-group/ModalGroup';
 import { Table } from '../../components/tables/table/Table';
 import './Subgroups.css';
 
@@ -56,7 +55,6 @@ export const Subgroups = () => {
             <div className="subgroups-title">
                 <p>Подгруппы</p>
             </div>
-            <ModalGroup />
             <Table data={data} user="subgroup" />
         </div>
     );

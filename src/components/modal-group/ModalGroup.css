@@ -1,9 +1,11 @@
-.modal-group-section {
-    right: 0;
-    padding: 0 250px 0 0;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
+.modal-button {
+    display: inline;
+    padding: 0 10px;
+}
+
+.modal-button:last-child {
+    display: inline;
+    padding-right: 0;
 }
 
 .modal-group {
@@ -12,7 +14,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -24,41 +24,45 @@ export const PassRecovery: React.FC = () => {
     };
 
     return (
-        <section className="recovery-section">
-            <div className="svg-container">
+        <div className="recovery-wrapper">
+            <section className="recovery-logo-section">
                 <SguSvg />
-            </div>
-            <p className="recovery-head-text">Восстановление пароля</p>
-            <p className="recovery-info-text">
-                Введите адрес вашей электронной почты для отправки инструкции по
-                восстановлению пароля
-            </p>
-            <form className="recovery-form" action="#" method="post">
-                <label className="recovery-text-label">Адрес эл. почты</label>
-                <input
-                    className="recovery-input"
-                    type="email"
-                    name="recivery-email"
-                    placeholder="Введите адрес эл. почты"
-                    required
-                    value={email}
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}
-                />
-            </form>
-            <div className="recovery-submit">
-                <button
-                    className="recovery-submit-button"
-                    type="submit"
-                    name="recovery-submit"
-                >
-                    Отправить
-                </button>
-                <NavLink to="/auth" className="recovery-back-text">
-                    На страницу входа
-                </NavLink>
-            </div>
-        </section>
+            </section>
+            <section className="recovery-section">
+                <h1 className="recovery-title">Восстановление пароля</h1>
+                <h2 className="recovery-subtitle">
+                    Введите адрес вашей электронной почты для отправки
+                    инструкции по восстановлению пароля
+                </h2>
+                <form className="recovery-form" action="#" method="post">
+                    <label className="recovery-text-label">
+                        Адрес эл. почты
+                    </label>
+                    <input
+                        className="recovery-input"
+                        type="email"
+                        name="recivery-email"
+                        placeholder="Введите адрес эл. почты"
+                        required
+                        value={email}
+                        onChange={handleInputChange}
+                        onFocus={handleInputFocus}
+                        onBlur={handleInputBlur}
+                    />
+                </form>
+                <div className="recovery-submit">
+                    <button
+                        className="recovery-submit-button"
+                        type="submit"
+                        name="recovery-submit"
+                    >
+                        Отправить
+                    </button>
+                    <NavLink to="/auth" className="recovery-back-text">
+                        На страницу входа
+                    </NavLink>
+                </div>
+            </section>
+        </div>
     );
 };

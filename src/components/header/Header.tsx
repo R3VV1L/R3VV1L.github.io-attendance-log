@@ -1,12 +1,12 @@
 import './Header.css';
-import { BurgerMenuAdmin } from '../burger-menu-admin/BurgerMenuAdmin';
+import { NavbarMenu } from '../navbar-menu/NavbarMenu';
 
 export const Header = () => {
     return (
         <header>
             <nav className="navbar">
                 <div className="navbar-menu">
-                    <BurgerMenuAdmin />
+                    <NavbarMenu />
                 </div>
                 <div className="navbar-profile">
                     <p className="navbar-profile-name">

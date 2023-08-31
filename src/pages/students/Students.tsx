@@ -1,4 +1,3 @@
-import { ModalGroup } from '../../components/modal-group/ModalGroup';
 import { Table } from '../../components/tables/table/Table';
 import './Students.css';
 
@@ -153,9 +152,8 @@ export const Students = () => {
     return (
         <div>
             <div className="students-title">
-                <p>Студент</p>
+                <p>Студенты</p>
             </div>
-            <ModalGroup />
             <Table data={data} user="student" />
         </div>
     );

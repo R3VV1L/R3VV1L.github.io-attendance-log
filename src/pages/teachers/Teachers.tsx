@@ -1,6 +1,5 @@
 import { Table } from '../../components/tables/table/Table.tsx';
 import './Teachers.css';
-import { ModalGroup } from '../../components/modal-group/ModalGroup.tsx';
 
 export const Teachers = () => {
     const data = [
@@ -147,7 +146,6 @@ export const Teachers = () => {
             <div className="teachers-title">
                 <p>Преподаватели</p>
             </div>
-            <ModalGroup />
             <Table data={data} user="teacher" />
         </div>
     );

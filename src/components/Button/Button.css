@@ -3,28 +3,28 @@ button {
 }
 
 .button-fill {
-    width: 200px;
-    height: 48px;
+    width: 150px;
+    height: 36px;
     color: #ffffff;
     text-align: center;
-    font: 600 16px 'Outfit', sans-serif;
-    background: #1279be;
     border-width: 1px;
-    border-color: #1279be;
-    border-style: solid;
     border-radius: 24px;
+    border-style: solid;
+    border-color: #0071e3;
+    font: 500 14px 'Outfit', sans-serif;
+    background: #0071e3;
 }
 
 .button-empty {
-    width: 200px;
-    height: 48px;
+    width: 150px;
+    height: 36px;
+    text-align: center;
+    border-width: 1px;
     border-radius: 24px;
     border-style: solid;
-    border-color: #1279be;
-    border-width: 1px;
-    color: #1279be;
-    text-align: center;
-    font: 600 16px 'Outfit', sans-serif;
+    border-color: #0071e3;
+    color: #0071e3;
+    font: 500 14px 'Outfit', sans-serif;
 }
 
 .button-big {
