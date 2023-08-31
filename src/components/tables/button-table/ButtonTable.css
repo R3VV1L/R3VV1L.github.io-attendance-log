@@ -1,10 +1,12 @@
 .button-table {
     inset: 0;
     height: 40px;
-    padding: 20px 250px;
+    padding: 20px 10px;
     margin: 0;
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    z-index: 1001;
+    position: sticky
 }
 
 .button-table-border {
@@ -21,7 +23,7 @@
     width: 80px;
     height: 22px;
     display: inline-block;
-    padding: 8px 0px;
+    padding: 8px 0;
     color: #1279be;
     text-align: center;
     font: 400 16px 'Outfit', sans-serif;
@@ -50,4 +52,10 @@
     cursor: pointer;
     float: left;
     background: none;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 740px) {
+    .button-table {
+        padding: 20px 10px;
+    }
 }

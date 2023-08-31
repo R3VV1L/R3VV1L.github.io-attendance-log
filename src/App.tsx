@@ -13,12 +13,14 @@ import { Layout } from './components/layouts/Layout.tsx';
 import { Provider } from 'react-redux';
 import store from './API/store.tsx';
 import { Attendance } from './pages/attendance/Attendance.tsx';
+import { Deanery } from './pages/deanery/Deanery.tsx';
 
 function App() {
     return (
         <Provider store={store}>
             <Routes>
                 <Route path="deanery" element={<Layout />}>
+                    <Route path="admin" element={<Deanery />} />
                     <Route path="teachers" element={<Teachers />} />
                     <Route path="groups" element={<Groups />} />
                     <Route path="subgroups" element={<Subgroups />} />
