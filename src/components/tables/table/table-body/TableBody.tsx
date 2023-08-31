@@ -1,4 +1,3 @@
-import React from 'react';
 import { TableCheckbox } from '../table-checkbox/TableCheckbox';
 
 interface TableBodyProps {
