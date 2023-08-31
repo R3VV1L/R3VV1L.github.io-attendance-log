@@ -1,7 +1,7 @@
 .button-table {
     inset: 0;
     height: 40px;
-    padding: 20px 250px;
+    padding: 20px 10px;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -52,4 +52,10 @@
     cursor: pointer;
     float: left;
     background: none;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 740px) {
+    .button-table {
+        padding: 20px 10px;
+    }
 }
