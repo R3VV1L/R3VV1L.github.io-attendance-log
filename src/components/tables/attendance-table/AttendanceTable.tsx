@@ -6,7 +6,9 @@ interface TableProps {
 }
 
 export const AttendanceTable = ({ data, user }: TableProps) => {
-    const sortedData = data.sort((a, b) => a.name.localeCompare(b.name));
+    const sortedData = data.sort((a: any, b: any) =>
+        a.name.localeCompare(b.name)
+    );
 
     return (
         <div className="wrapper-attendance-table">

@@ -5,7 +5,6 @@ import { RootState } from '@reduxjs/toolkit/dist/query/core/apiState';
 import { setTableLength } from '../../../API/table/action.tsx';
 import { Search } from '../../search/Search.tsx';
 import { ButtonTable } from '../button-table/ButtonTable.tsx';
-import { TableCheckbox } from './table-checkbox/TableCheckbox.tsx';
 import { TableHeader } from './table-header/TableHeader.tsx';
 import { TableBody } from './table-body/TableBody.tsx';
 import { ModalGroup } from '../../modal-group/ModalGroup.tsx';
