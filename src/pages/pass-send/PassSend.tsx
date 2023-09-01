@@ -3,6 +3,7 @@ import React from 'react';
 import { SguSvg } from '../../assets/SguSvg.tsx';
 import { NavLink } from 'react-router-dom';
 import './PassSend.css';
+import { ArrowForward } from '../../assets/arrows/ArrowForward.tsx';
 
 export const PassSend = () => {
     return (
@@ -18,6 +19,7 @@ export const PassSend = () => {
                     </h2>
                     <NavLink to="/auth" className="send-back-text">
                         На страницу входа
+                        <ArrowForward />
                     </NavLink>
                 </div>
             </section>

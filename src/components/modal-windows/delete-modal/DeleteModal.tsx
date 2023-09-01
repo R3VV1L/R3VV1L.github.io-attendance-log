@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import './DeleteModal.css';
 import { Button } from '../../Button/Button';
-// @ts-ignore
-export const DeleteModal = ({ onClose }) => {
+
+interface EditModalProps {
+    onClose: () => void;
+}
+
+export const DeleteModal: React.FC<EditModalProps> = ({ onClose }) => {
     // @ts-ignore
     const [showModal, setShowModal] = useState(false);
     // @ts-ignore
@@ -16,27 +20,26 @@ export const DeleteModal = ({ onClose }) => {
     };
 
     return (
-        <div className="delete-modal-group">
+        <section className="delete-modal-group">
+            <h1 className="delete-modal-title">Удаление записи</h1>
             <div className="delete-modal-content">
-                <div className="delete-modal-title">Подтверждение удаления</div>
-                <div className="delete-modal-subtitle">
-                    Вы действительно хотите удалить эти объекты?
-                </div>
-                <div className="del-button">
-                    <Button
-                        title="удалить"
-                        size="fill"
-                        onClick={handleCloseDeleteModal}
-                    />
-                </div>
-                <div className="cancel-button">
-                    <Button
-                        title="Отмена"
-                        size="empty"
-                        onClick={handleCloseDeleteModal}
-                    />
-                </div>
+                <h2 className="delete-modal-subtitle">
+                    Вы действительно хотите удалить эти записи?
+                </h2>
             </div>
-        </div>
+            <section className="add-modal-control">
+                <Button
+                    title="Отмена"
+                    size="fill"
+                    onClick={handleCloseDeleteModal}
+                />
+                <Button
+                    title="Удалить"
+                    size="empty"
+                    onClick={handleCloseDeleteModal}
+                />
+            </section>
+        </section>
+
     );
 };

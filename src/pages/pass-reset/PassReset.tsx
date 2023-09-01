@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SguSvg } from '../../assets/SguSvg.tsx';
 import { NavLink } from 'react-router-dom';
 import './PassReset.css';
+import { ArrowForward } from '../../assets/arrows/ArrowForward.tsx';
 
 export const PassReset: React.FC = () => {
     const [password1, setPassword1] = useState('');
@@ -79,6 +80,7 @@ export const PassReset: React.FC = () => {
                 </div>
                 <NavLink to="/auth" className="reset-back-text">
                     На страницу входа
+                    <ArrowForward />
                 </NavLink>
             </section>
         </div>

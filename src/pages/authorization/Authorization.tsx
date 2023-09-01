@@ -4,6 +4,8 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import './Authorization.css';
 import { useDispatch } from 'react-redux';
 import { setAdminStatus } from '../../API/auth/authActions.tsx';
+import { Input } from '../../components/input/Input.tsx';
+import { ArrowOutward } from '../../assets/arrows/ArrowOutward.tsx';
 
 type User = {
     username: string;
@@ -44,24 +46,9 @@ export const Authorization: React.FC = () => {
             navigate('/attendance');
             console.log('student');
         } else {
-            setIsError(true); // устанавливаем значение isError в true, если данные неверны
+            // устанавливаем значение isError в true, если данные неверны
+            setIsError(true);
             console.log('Неправильный логин или пароль', isLoggedIn);
-        }
-    };
-
-    const handleInputFocus = (event: React.FocusEvent<HTMLInputElement>) => {
-        if (!event.target.value) {
-            event.target.placeholder = '';
-        }
-    };
-
-    const handleInputBlur = (event: React.FocusEvent<HTMLInputElement>) => {
-        if (!event.target.value) {
-            if (event.target.name === 'auth-email') {
-                event.target.placeholder = 'Введите логин';
-            } else if (event.target.name === 'auth-pass') {
-                event.target.placeholder = 'Введите пароль';
-            }
         }
     };
 
@@ -77,29 +64,28 @@ export const Authorization: React.FC = () => {
                         Введите данные вашей учетной записи
                     </h2>
                     <form className="auth-form" action="#" method="post">
-                        <label className="auth-text-label">Логин</label>
-                        <input
-                            className="auth-input"
+                        <Input
                             type="email"
                             name="auth-email"
                             placeholder="Введите Логин"
                             required
                             value={email}
                             onChange={handleInputChange}
-                            onFocus={handleInputFocus}
-                            onBlur={handleInputBlur}
+                            onKeyPress={(event) => {
+                                if (event.key === 'Enter') {
+                                    handleLogin();
+                                }
+                            }}
                         />
-                        <label className="auth-text-label">Пароль</label>
-                        <input
-                            className="auth-input"
+                    </form>
+                    <form className="auth-form" action="#" method="post">
+                        <Input
                             type="password"
                             name="auth-pass"
                             placeholder="Введите Пароль"
                             required
                             value={password}
                             onChange={handleInputChange}
-                            onFocus={handleInputFocus}
-                            onBlur={handleInputBlur}
                             onKeyPress={(event) => {
                                 if (event.key === 'Enter') {
                                     handleLogin();
@@ -108,20 +94,23 @@ export const Authorization: React.FC = () => {
                         />
                         {isError && ( // условие для отображения сообщения об ошибке
                             <p className="auth-error-text">
-                                Неправильный логин или пароль
+                                Неверный логин или пароль
                             </p>
                         )}
                     </form>
-                    <button
-                        className="auth-submit-button"
-                        type="submit"
-                        name="auth-submit"
-                        onClick={handleLogin}
-                    >
-                        Войти
-                    </button>
+                    <section className="auth-control">
+                        <button
+                            className="auth-submit-button"
+                            type="submit"
+                            name="auth-submit"
+                            onClick={handleLogin}
+                        >
+                            Войти
+                        </button>
+                    </section>
                     <NavLink to="/pass-recovery" className="auth-forgot-text">
                         Забыли логин или пароль?
+                        <ArrowOutward />
                     </NavLink>
                 </section>
             </div>
