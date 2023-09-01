@@ -1,14 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import './NotFound.css';
+import { ArrowForward } from '../../assets/arrows/ArrowForward';
 
 export const NotFound = () => {
     return (
         <div className="err">
-            <h1>404</h1>
-            <h2>404</h2>
-            <h3>404</h3>
-            <NavLink to={'/auth'} className="goBack">
+            <p className="err-text">404</p>
+            <NavLink to={'/auth'} className="back-link">
                 Перейти назад
+                <ArrowForward />
             </NavLink>
         </div>
     );

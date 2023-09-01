@@ -1,4 +1,5 @@
 import { TableCheckbox } from '../table-checkbox/TableCheckbox';
+import './TableBody.css';
 
 interface TableBodyProps {
     data: any[];

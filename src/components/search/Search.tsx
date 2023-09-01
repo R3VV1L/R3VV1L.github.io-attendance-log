@@ -28,12 +28,6 @@ export const Search = ({ onSearch }: SearchProps) => {
         setQuery(event.target.value);
     };
 
-    const handleInputFocus = (event: React.FocusEvent<HTMLInputElement>) => {
-        if (!event.target.value) {
-            event.target.placeholder = '';
-        }
-    };
-
     const handleInputBlur = (event: React.FocusEvent<HTMLInputElement>) => {
         if (!event.target.value) {
             event.target.placeholder = 'Поиск...';
@@ -52,7 +46,6 @@ export const Search = ({ onSearch }: SearchProps) => {
                     setQuery(event.target.value);
                     handleInputChange(event);
                 }}
-                onFocus={handleInputFocus}
                 onBlur={handleInputBlur}
                 onKeyPress={handleKeyPress}
             />

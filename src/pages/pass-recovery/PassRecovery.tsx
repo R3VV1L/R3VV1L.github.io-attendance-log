@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { SguSvg } from '../../assets/SguSvg.tsx';
 import { NavLink } from 'react-router-dom';
 import './PassRecovery.css';
+import { ArrowForward } from '../../assets/arrows/ArrowForward.tsx';
 
 export const PassRecovery: React.FC = () => {
     const [email, setMail] = useState('');
@@ -60,6 +61,7 @@ export const PassRecovery: React.FC = () => {
                     </button>
                     <NavLink to="/auth" className="recovery-back-text">
                         На страницу входа
+                        <ArrowForward />
                     </NavLink>
                 </div>
             </section>

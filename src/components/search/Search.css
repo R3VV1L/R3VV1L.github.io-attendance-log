@@ -3,6 +3,17 @@
     height: 38px;
     position: relative;
     border-radius: 8px;
+    border: 1px solid #d2d2d7;
+}
+
+.search-box-text::placeholder {
+    font-size: 14px;
+    color: #999999;
+}
+
+.search-box-text:focus {
+    outline: none;
+    box-shadow: 0 0 8px 2px rgba(0, 113, 227, 0.2);
 }
 
 .search-box-text {
@@ -22,15 +33,23 @@
 }
 
 .search-bottom {
-    width: 38px;
+    width: 48px;
     height: inherit;
+    padding: 0;
+    display: flex;
     position: absolute;
     top: 0;
-    left: 252px;
-    padding: 10px 0 0 0;
+    right: 0;
     background: none;
     color: white;
     border: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+svg:hover path {
+    transition-delay: 0.2s;
+    fill: #000;
 }
 
 .search-box::after {

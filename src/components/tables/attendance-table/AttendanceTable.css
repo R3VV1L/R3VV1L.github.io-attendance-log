@@ -13,18 +13,12 @@
     table-layout: auto;
 }
 
-thead {
-    position: sticky;
-    top: 0;
-    background-color: #fff;
-}
-
 .scroll {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .attendance-table-th {
-    height: 28px;
+    min-height: 38px;
     padding: 4px 8px;
     text-align: left;
     color: #000;

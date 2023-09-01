@@ -1,9 +1,22 @@
 .err {
-    padding: 50px 0;
+    width: 100%;
+    height: 100vh;
     text-align: center;
-    color: #1279be;
 }
-.goBack {
+
+.err-text {
+    margin: 0;
+    font-size: 314px;
+    font-weight: 500;
+    color: #0066cc;
+}
+
+.back-link {
     text-decoration-line: none;
-    color: #1279be;
+    color: #0066cc;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #0066cc;
 }

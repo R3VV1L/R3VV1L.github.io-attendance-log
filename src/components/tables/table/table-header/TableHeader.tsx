@@ -1,4 +1,5 @@
 import { TableCheckbox } from '../table-checkbox/TableCheckbox';
+import './TableHeader.css';
 
 interface TableHeaderProps {
     user: 'teacher' | 'student' | 'group' | 'subgroup';
