@@ -22,16 +22,20 @@ export const DeleteModal = ({ onClose }) => {
                 <div className="delete-modal-subtitle">
                     Вы действительно хотите удалить эти объекты?
                 </div>
-                <Button
-                    title="Отмена"
-                    size="fill"
-                    onClick={handleCloseDeleteModal}
-                />
-                <Button
-                    title="Удалить"
-                    size="empty"
-                    onClick={handleCloseDeleteModal}
-                />
+                <div className="del-button">
+                    <Button
+                        title="удалить"
+                        size="fill"
+                        onClick={handleCloseDeleteModal}
+                    />
+                </div>
+                <div className="cancel-button">
+                    <Button
+                        title="Отмена"
+                        size="empty"
+                        onClick={handleCloseDeleteModal}
+                    />
+                </div>
             </div>
         </div>
     );
