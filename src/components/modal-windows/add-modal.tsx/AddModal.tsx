@@ -53,17 +53,17 @@ export const AddModal = ({ onClose }) => {
                     <label className="add-modal-subtitle">Пароль</label>
                     <input className="input-name" placeholder="Не заполнено" />
                 </div>
-                <div className="cancel-button">
-                    <Button
-                        title="Отмена"
-                        size="empty"
-                        onClick={handleCloseAddModal}
-                    />
-                </div>
                 <div className="add-button">
                     <Button
                         title="Добавить"
                         size="fill"
+                        onClick={handleCloseAddModal}
+                    />
+                </div>
+                <div className="cancel-button">
+                    <Button
+                        title="Отмена"
+                        size="empty"
                         onClick={handleCloseAddModal}
                     />
                 </div>

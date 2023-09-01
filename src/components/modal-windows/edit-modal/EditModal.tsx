@@ -57,15 +57,17 @@ export const EditModal = ({ onClose }) => {
                     <label className="edit-modal-subtitle">Пароль</label>
                     <input className="input-name" placeholder="Не заполнено" />
                 </div>
-                <Button
-                    title="Отмена"
-                    size="empty"
-                    onClick={handleCloseEditModal}
-                />
-                <div>
+                <div className="add-button">
                     <Button
                         title="Добавить"
                         size="fill"
+                        onClick={handleCloseEditModal}
+                    />
+                </div>
+                <div className="cancel-button">
+                    <Button
+                        title="Отмена"
+                        size="empty"
                         onClick={handleCloseEditModal}
                     />
                 </div>
