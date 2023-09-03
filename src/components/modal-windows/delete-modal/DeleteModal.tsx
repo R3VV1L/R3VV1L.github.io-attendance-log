@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './DeleteModal.css';
-import { Button } from '../../Button/Button';
+import { Button } from '../../button/Button';
 
 interface EditModalProps {
     onClose: () => void;
