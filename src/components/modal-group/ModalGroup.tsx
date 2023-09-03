@@ -40,21 +40,21 @@ export const ModalGroup = () => {
                 <div className="modal-button">
                     <Button
                         title="+ Добавить"
-                        size="fill"
+                        type="add"
                         onClick={handleOpenAddModal}
                     />
                 </div>
                 <div className="modal-button">
                     <Button
                         title="Редактировать"
-                        size="empty"
+                        type="edit"
                         onClick={handleOpenEditModal}
                     />
                 </div>
                 <div className="modal-button">
                     <Button
                         title="Удалить"
-                        size="empty"
+                        type="delete"
                         onClick={handleOpenDeleteModal}
                     />
                 </div>

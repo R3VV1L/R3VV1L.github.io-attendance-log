@@ -47,10 +47,10 @@
     justify-content: space-around;
 }
 
-svg:hover path {
+/* svg:hover path {
     transition-delay: 0.2s;
     fill: #000;
-}
+} */
 
 .search-box::after {
     content: '';

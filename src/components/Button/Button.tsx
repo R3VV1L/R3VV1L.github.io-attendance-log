@@ -3,13 +3,13 @@ import './Button.css';
 
 interface ButtonProps {
     title: string;
-    size: 'fill' | 'empty' | 'big';
+    type?: 'auth' | 'add' | 'edit' | 'delete' | 'cancel';
     onClick: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = ({ title, size, onClick }) => {
+export const Button: React.FC<ButtonProps> = ({ title, type, onClick }) => {
     return (
-        <button onClick={onClick} className={`button-${size}`}>
+        <button className={`Button Button--${type}`} onClick={onClick}>
             {title}
         </button>
     );

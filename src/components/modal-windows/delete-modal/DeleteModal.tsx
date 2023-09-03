@@ -22,24 +22,21 @@ export const DeleteModal: React.FC<EditModalProps> = ({ onClose }) => {
     return (
         <section className="delete-modal-group">
             <h1 className="delete-modal-title">Удаление записи</h1>
-            <div className="delete-modal-content">
-                <h2 className="delete-modal-subtitle">
-                    Вы действительно хотите удалить эти записи?
-                </h2>
-            </div>
+            <h2 className="delete-modal-subtitle">
+                Вы действительно хотите удалить эти записи?
+            </h2>
             <section className="add-modal-control">
                 <Button
                     title="Отмена"
-                    size="fill"
+                    type="cancel"
                     onClick={handleCloseDeleteModal}
                 />
                 <Button
                     title="Удалить"
-                    size="empty"
+                    type="delete"
                     onClick={handleCloseDeleteModal}
                 />
             </section>
         </section>
-
     );
 };

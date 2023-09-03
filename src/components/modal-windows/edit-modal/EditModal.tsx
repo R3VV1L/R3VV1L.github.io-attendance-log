@@ -101,12 +101,12 @@ export const EditModal = ({ onClose }) => {
             <section className="edit-modal-control">
                 <Button
                     title="Отмена"
-                    size="empty"
+                    type="cancel"
                     onClick={handleCloseEditModal}
                 />
                 <Button
                     title="Редактировать"
-                    size="fill"
+                    type="edit"
                     onClick={handleCloseEditModal}
                 />
             </section>

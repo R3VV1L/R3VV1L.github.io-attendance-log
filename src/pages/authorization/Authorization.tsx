@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { setAdminStatus } from '../../API/auth/authActions.tsx';
 import { Input } from '../../components/input/Input.tsx';
 import { ArrowOutward } from '../../assets/arrows/ArrowOutward.tsx';
+import { Button } from '../../components/button/Button.tsx';
 
 type User = {
     username: string;
@@ -99,14 +100,11 @@ export const Authorization: React.FC = () => {
                         )}
                     </form>
                     <section className="auth-control">
-                        <button
-                            className="auth-submit-button"
-                            type="submit"
-                            name="auth-submit"
+                        <Button
+                            type="auth"
+                            title={'Войти'}
                             onClick={handleLogin}
-                        >
-                            Войти
-                        </button>
+                        />
                     </section>
                     <NavLink to="/pass-recovery" className="auth-forgot-text">
                         Забыли логин или пароль?
