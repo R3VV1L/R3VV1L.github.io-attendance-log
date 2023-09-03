@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { setAdminStatus } from '../../API/auth/authActions.tsx';
 import { Input } from '../../components/input/Input.tsx';
 import { ArrowOutward } from '../../assets/arrows/ArrowOutward.tsx';
-import { Button } from '../../components/Button/Button.tsx';
+import { Button } from '../../components/button/Button.tsx';
 
 type User = {
     username: string;
