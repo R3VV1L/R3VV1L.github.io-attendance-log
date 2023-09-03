@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './EditModal.css';
-import { Button } from '../../button/Button';
 import { Input } from '../../input/Input';
 import { Select } from '../../select/Select';
+import { Button } from '../../button/Button.tsx';
 
 // @ts-ignore
 export const EditModal = ({ onClose }) => {
