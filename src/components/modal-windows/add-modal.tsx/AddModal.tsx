@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './AddModal.css';
-import { Button } from '../../button/Button';
+import { Button } from '../../Button/Button';
 import { Input } from '../../input/Input';
 import { Select } from '../../select/Select';
 
