@@ -106,7 +106,9 @@ export const TableBody = ({ data, user }: TableBodyProps) => {
                 data.map(renderRow)
             ) : (
                 <tr>
-                    <td colSpan={7}>No data available</td>
+                    <td className="no-data" colSpan={7}>
+                        404 - данные не найдены
+                    </td>
                 </tr>
             )}
         </tbody>

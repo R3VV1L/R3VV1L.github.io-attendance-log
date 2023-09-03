@@ -38,5 +38,6 @@ export const DeleteModal: React.FC<EditModalProps> = ({ onClose }) => {
                 />
             </section>
         </section>
+
     );
 };

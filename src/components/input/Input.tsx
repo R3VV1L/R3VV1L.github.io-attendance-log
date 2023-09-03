@@ -20,6 +20,7 @@ export const Input: React.FC<InputProps> = ({
     onChange,
     onKeyPress,
 }) => {
+    // @ts-ignore
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
             // Действия, которые нужно выполнить при нажатии клавиши "Enter"
