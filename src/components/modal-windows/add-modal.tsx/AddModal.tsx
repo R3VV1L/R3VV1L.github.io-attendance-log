@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './AddModal.css';
-import { Button } from '../../Button/Button';
+import { Button } from '../../button/Button';
 import { Input } from '../../input/Input';
 import { Select } from '../../select/Select';
 
@@ -102,12 +102,12 @@ export const AddModal: React.FC<AddModalProps> = ({ onClose }) => {
             <section className="add-modal-control">
                 <Button
                     title="Отмена"
-                    size="empty"
+                    type="cancel"
                     onClick={handleCloseAddModal}
                 />
                 <Button
                     title="Добавить"
-                    size="fill"
+                    type="add"
                     onClick={handleCloseAddModal}
                 />
             </section>

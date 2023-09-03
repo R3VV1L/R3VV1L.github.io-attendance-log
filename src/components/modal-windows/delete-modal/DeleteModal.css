@@ -8,25 +8,21 @@
     box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.1);
 }
 
-.delete-modal-content {
-    display: block;
-    padding: 0 60px;
-}
-
 .delete-modal-title {
     padding: 60px 0 40px 0;
 }
 
 .delete-modal-subtitle {
     padding-bottom: 10px;
-    display: flex;
-    align-items: center;
-    text-align: left;
 }
 
 .delete-modal-control {
     padding: 30px 60px 60px 60px;
     display: grid;
     grid-template-columns: 50% 50%;
+<<<<<<< Updated upstream
     justify-items: center;
 }
+=======
+    justify-items: center;
+>>>>>>> Stashed changes

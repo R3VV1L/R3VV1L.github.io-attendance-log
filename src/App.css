@@ -23,11 +23,13 @@ header {
 h1 {
     margin: 0;
     font: 600 24px Outfit, sans-serif;
+    text-align: center;
     color: #000;
 }
 
 h2 {
     margin: 0;
     font: 300 14px Outfit, sans-serif;
+    text-align: center;
     color: #333;
 }
