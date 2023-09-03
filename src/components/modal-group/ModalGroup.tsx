@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './ModalGroup.css';
-import { Button } from '../Button/Button.tsx';
+import { Button } from '../button/Button.tsx';
 import { AddModal } from '../modal-windows/add-modal.tsx/AddModal.tsx';
 import { EditModal } from '../modal-windows/edit-modal/EditModal.tsx';
 import { DeleteModal } from '../modal-windows/delete-modal/DeleteModal.tsx';
