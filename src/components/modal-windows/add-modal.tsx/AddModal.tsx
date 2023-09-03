@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './AddModal.css';
-import { Button } from '../../button/Button';
+import { Button } from '../../Button/Button';
 import { Input } from '../../input/Input';
 import { Select } from '../../select/Select';
 
@@ -22,15 +22,11 @@ export const AddModal: React.FC<AddModalProps> = ({ onClose }) => {
     ];
     const optionsDepartment = ['ИТиМ', 'ПиД', 'СПФ'];
 
-    // @ts-ignore
-    const handleOpenModal = () => {
-        setShowModal(true);
-    };
-
     const handleCloseAddModal = () => {
         setShowModal(false);
         onClose();
     };
+
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
             // Действия, которые нужно выполнить при нажатии клавиши "Enter"

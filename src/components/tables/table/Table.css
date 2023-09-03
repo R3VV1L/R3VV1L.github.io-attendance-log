@@ -1,8 +1,6 @@
 .wrapper-table {
     width: 75%;
     margin: 0 auto;
-    position: relative;
-    z-index: 1001;
 }
 
 .table-controls {
