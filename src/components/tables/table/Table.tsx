@@ -42,7 +42,7 @@ export const Table = ({ data, user }: TableProps) => {
         );
         setFilteredData(sorted);
         dispatch(setTableLength(sorted.length));
-    }, [dispatch]);
+    }, [dispatch, filteredData]);
 
     const handleSearch = (query: string) => {
         const filtered = tableData.filter((item: any) =>
@@ -52,6 +52,14 @@ export const Table = ({ data, user }: TableProps) => {
         );
         setFilteredData(filtered);
     };
+
+    // const [showModal, setShowModal] = useState(false);
+    // const [selectedRow, setSelectedRow] = useState(null);
+
+    // const handleRowClick = (row) => {
+    //     setSelectedRow(row);
+    //     setShowModal(true);
+    // };
 
     return (
         <div className="wrapper-table">

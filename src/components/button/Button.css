@@ -1,12 +1,12 @@
 .Button {
     cursor: pointer;
+    text-align: center;
     font: 500 14px 'Outfit', sans-serif;
 }
 
 .Button--auth {
     width: 300px;
     height: 38px;
-    text-align: center;
     border-width: 1px;
     border-radius: 24px;
     border-style: solid;
@@ -17,9 +17,8 @@
 
 .Button--add {
     width: auto;
-    height: 36px;
+    height: 38px;
     padding: 0 32px;
-    text-align: center;
     border-width: 1px;
     border-radius: 24px;
     border-style: solid;
@@ -30,9 +29,8 @@
 
 .Button--edit {
     width: auto;
-    height: 36px;
+    height: 38px;
     padding: 0 32px;
-    text-align: center;
     border-width: 1px;
     border-radius: 24px;
     border-style: solid;
@@ -43,9 +41,8 @@
 
 .Button--delete {
     width: auto;
-    height: 36px;
+    height: 38px;
     padding: 0 32px;
-    text-align: center;
     border-width: 1px;
     border-radius: 24px;
     border-style: solid;
@@ -58,7 +55,6 @@
     width: auto;
     height: auto;
     padding: 0 8px;
-    text-align: center;
     border-width: 1px;
     border-radius: 24px;
     border-style: solid;

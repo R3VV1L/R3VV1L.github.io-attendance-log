@@ -22,15 +22,11 @@ export const AddModal: React.FC<AddModalProps> = ({ onClose }) => {
     ];
     const optionsDepartment = ['ИТиМ', 'ПиД', 'СПФ'];
 
-    // @ts-ignore
-    const handleOpenModal = () => {
-        setShowModal(true);
-    };
-
     const handleCloseAddModal = () => {
         setShowModal(false);
         onClose();
     };
+
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
             // Действия, которые нужно выполнить при нажатии клавиши "Enter"

@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import './ModalGroup.css';
-import { Button } from '../Button/Button.tsx';
+import { Button } from '../button/Button.tsx';
 import { AddModal } from '../modal-windows/add-modal.tsx/AddModal.tsx';
-import { EditModal } from '../modal-windows/edit-modal/EditModal.tsx';
 import { DeleteModal } from '../modal-windows/delete-modal/DeleteModal.tsx';
 
 export const ModalGroup = () => {
     const [showAddModal, setShowAddModal] = useState(false);
-    const [showEditModal, setShowEditModal] = useState(false);
+    // const [showEditModal, setShowEditModal] = useState(false);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
 
     const handleOpenAddModal = () => {
@@ -18,13 +17,13 @@ export const ModalGroup = () => {
         setShowAddModal(false);
     };
 
-    const handleOpenEditModal = () => {
-        setShowEditModal(true);
-    };
+    // const handleOpenEditModal = () => {
+    //     setShowEditModal(true);
+    // };
 
-    const handleCloseEditModal = () => {
-        setShowEditModal(false);
-    };
+    // const handleCloseEditModal = () => {
+    //     setShowEditModal(false);
+    // };
 
     const handleOpenDeleteModal = () => {
         setShowDeleteModal(true);
@@ -44,13 +43,13 @@ export const ModalGroup = () => {
                         onClick={handleOpenAddModal}
                     />
                 </div>
-                <div className="modal-button">
+                {/* <div className="modal-button">
                     <Button
                         title="Редактировать"
                         type="edit"
                         onClick={handleOpenEditModal}
                     />
-                </div>
+                </div> */}
                 <div className="modal-button">
                     <Button
                         title="Удалить"
@@ -66,11 +65,11 @@ export const ModalGroup = () => {
                 </div>
             )}
 
-            {showEditModal && (
+            {/* {showEditModal && (
                 <div className="modal-group">
                     <EditModal onClose={handleCloseEditModal} />
                 </div>
-            )}
+            )} */}
 
             {showDeleteModal && (
                 <div className="modal-group">
